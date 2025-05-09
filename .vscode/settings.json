@@ -1,0 +1,21 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/usr/local/lib/python3/site-packages",
+        "/home/mrxiuer/project/毕设/demo/src/install/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/usr/local/lib/python3/site-packages",
+        "/home/mrxiuer/project/毕设/demo/src/install/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "ros.distro": "humble",
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    }
+}

@@ -1,0 +1,24 @@
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:[m[K In constructor ‘[01m[Kgz::gui::TargetPointPlugin::TargetPointPlugin()[m[K’:
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:30:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gz::gui::TargetPointPlugin[m[K’ has no member named ‘[01m[KApp[m[K’
+   30 |       this->[01;31m[KApp[m[K()->findChild<MainWindow*>()->QuickWindow()->contentItem()->addItem(mainWidget);
+      |             [01;31m[K^~~[m[K
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:30:40:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K*[m[K’ token
+   30 |       this->App()->findChild<MainWindow[01;31m[K*[m[K>()->QuickWindow()->contentItem()->addItem(mainWidget);
+      |                                        [01;31m[K^[m[K
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:30:41:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+   30 |       this->App()->findChild<MainWindow*[01;31m[K>[m[K()->QuickWindow()->contentItem()->addItem(mainWidget);
+      |                                         [01;31m[K^[m[K
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:30:43:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K)[m[K’ token
+   30 |       this->App()->findChild<MainWindow*>([01;31m[K)[m[K->QuickWindow()->contentItem()->addItem(mainWidget);
+      |                                           [01;31m[K^[m[K
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:[m[K In member function ‘[01m[Kvoid gz::gui::TargetPointPlugin::Update()[m[K’:
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:50:37:[m[K [01;31m[Kerror: [m[K‘[01m[KsceneFromFirstRenderEngine[m[K’ is not a member of ‘[01m[Kgz::rendering[m[K’
+   50 |         auto scene = gz::rendering::[01;31m[KsceneFromFirstRenderEngine[m[K();
+      |                                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:[m[K At global scope:
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:101:31:[m[K [01;31m[Kerror: [m[Kexpected constructor, destructor, or type conversion at end of input
+  101 |               gz::gui::Plugin)
+      |                               [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/target_point_plugin.dir/build.make:76: CMakeFiles/target_point_plugin.dir/src/target_point.cc.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:794: CMakeFiles/target_point_plugin.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

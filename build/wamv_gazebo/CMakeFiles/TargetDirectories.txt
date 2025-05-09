@@ -1,0 +1,9 @@
+/home/mrxiuer/project/毕设/demo/src/build/wamv_gazebo/CMakeFiles/uninstall.dir
+/home/mrxiuer/project/毕设/demo/src/build/wamv_gazebo/CMakeFiles/wamv_gazebo_uninstall.dir
+/home/mrxiuer/project/毕设/demo/src/build/wamv_gazebo/CMakeFiles/test.dir
+/home/mrxiuer/project/毕设/demo/src/build/wamv_gazebo/CMakeFiles/edit_cache.dir
+/home/mrxiuer/project/毕设/demo/src/build/wamv_gazebo/CMakeFiles/rebuild_cache.dir
+/home/mrxiuer/project/毕设/demo/src/build/wamv_gazebo/CMakeFiles/list_install_components.dir
+/home/mrxiuer/project/毕设/demo/src/build/wamv_gazebo/CMakeFiles/install.dir
+/home/mrxiuer/project/毕设/demo/src/build/wamv_gazebo/CMakeFiles/install/local.dir
+/home/mrxiuer/project/毕设/demo/src/build/wamv_gazebo/CMakeFiles/install/strip.dir

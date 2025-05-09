@@ -1,0 +1,78 @@
+[0.010s] Invoking command in '/home/mrxiuer/project/毕设/demo/src/build/vrx_gz': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble LD_LIBRARY_PATH=/home/mrxiuer/project/毕设/demo/src/install/lib:/usr/local/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/mrxiuer/project/毕设/demo/src/build/vrx_gz -- -j16 -l16
+[0.066s] [  2%] [32mBuilding CXX object CMakeFiles/target_point_plugin.dir/src/target_point.cc.o[0m
+[0.069s] [  6%] Built target ScoringPlugin
+[0.070s] [ 10%] Built target Waves
+[0.080s] [ 10%] Built target ament_cmake_python_copy_vrx_gz
+[0.087s] [35m[1mConsolidate compiler generated dependencies of target AcousticPingerPlugin[0m
+[0.088s] [35m[1mConsolidate compiler generated dependencies of target NavigationScoringPlugin[0m
+[0.088s] [35m[1mConsolidate compiler generated dependencies of target AcousticPerceptionScoringPlugin[0m
+[0.089s] [35m[1mConsolidate compiler generated dependencies of target GymkhanaScoringPlugin[0m
+[0.089s] [35m[1mConsolidate compiler generated dependencies of target AcousticTrackingScoringPlugin[0m
+[0.089s] [35m[1mConsolidate compiler generated dependencies of target PublisherPlugin[0m
+[0.089s] [35m[1mConsolidate compiler generated dependencies of target ScanDockScoringPlugin[0m
+[0.089s] [35m[1mConsolidate compiler generated dependencies of target WayfindingScoringPlugin[0m
+[0.089s] [35m[1mConsolidate compiler generated dependencies of target PerceptionScoringPlugin[0m
+[0.090s] [35m[1mConsolidate compiler generated dependencies of target PlacardPlugin[0m
+[0.090s] [35m[1mConsolidate compiler generated dependencies of target LightBuoyPlugin[0m
+[0.092s] [35m[1mConsolidate compiler generated dependencies of target BallShooterPlugin[0m
+[0.093s] [35m[1mConsolidate compiler generated dependencies of target StationkeepingScoringPlugin[0m
+[0.094s] [35m[1mConsolidate compiler generated dependencies of target PolyhedraBuoyancyDrag[0m
+[0.095s] [35m[1mConsolidate compiler generated dependencies of target SimpleHydrodynamics[0m
+[0.115s] [ 12%] [32m[1mLinking CXX shared library libGymkhanaScoringPlugin.so[0m
+[0.117s] [ 14%] [32m[1mLinking CXX shared library libLightBuoyPlugin.so[0m
+[0.120s] [ 16%] [32m[1mLinking CXX shared library libNavigationScoringPlugin.so[0m
+[0.120s] [ 18%] [32m[1mLinking CXX shared library libAcousticPingerPlugin.so[0m
+[0.121s] [ 22%] [32m[1mLinking CXX shared library libPublisherPlugin.so[0m
+[0.121s] [ 22%] [32m[1mLinking CXX shared library libPerceptionScoringPlugin.so[0m
+[0.122s] [ 24%] [32m[1mLinking CXX shared library libAcousticPerceptionScoringPlugin.so[0m
+[0.124s] [ 26%] [32m[1mLinking CXX shared library libAcousticTrackingScoringPlugin.so[0m
+[0.126s] [ 28%] [32m[1mLinking CXX shared library libBallShooterPlugin.so[0m
+[0.130s] [ 30%] [32m[1mLinking CXX shared library libPlacardPlugin.so[0m
+[0.131s] [ 32%] [32m[1mLinking CXX shared library libScanDockScoringPlugin.so[0m
+[0.135s] [ 34%] [32m[1mLinking CXX shared library libWayfindingScoringPlugin.so[0m
+[0.135s] [ 36%] [32m[1mLinking CXX shared library libSimpleHydrodynamics.so[0m
+[0.145s] [ 38%] [32m[1mLinking CXX shared library libStationkeepingScoringPlugin.so[0m
+[0.147s] [ 40%] [32m[1mLinking CXX shared library libPolyhedraBuoyancyDrag.so[0m
+[0.856s] [ 42%] Built target PublisherPlugin
+[0.895s] [35m[1mConsolidate compiler generated dependencies of target Surface[0m
+[0.906s] [ 44%] Built target PlacardPlugin
+[0.958s] [35m[1mConsolidate compiler generated dependencies of target USVWind[0m
+[0.961s] [ 46%] [32m[1mLinking CXX shared library libSurface.so[0m
+[1.009s] [ 48%] Built target NavigationScoringPlugin
+[1.026s] [ 50%] [32m[1mLinking CXX shared library libUSVWind.so[0m
+[1.033s] [ 52%] Built target GymkhanaScoringPlugin
+[1.048s] [ 54%] Built target SimpleHydrodynamics
+[1.049s] [35m[1mConsolidate compiler generated dependencies of target WaveVisual[0m
+[1.054s] [ 58%] Built target AcousticPerceptionScoringPlugin
+[1.063s] [35m[1mConsolidate compiler generated dependencies of target WildlifeScoringPlugin[0m
+[1.090s] [ 60%] Built target AcousticPingerPlugin
+[1.096s] [ 62%] [32m[1mLinking CXX shared library libWaveVisual.so[0m
+[1.121s] [ 64%] [32m[1mLinking CXX shared library libWildlifeScoringPlugin.so[0m
+[1.150s] [ 68%] Built target AcousticTrackingScoringPlugin
+[1.180s] [ 74%] Built target PolyhedraBuoyancyDrag
+[1.180s] [01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:12:10:[m[K [01;31m[Kfatal error: [m[Kgz/sim/MouseEvent.hh: No such file or directory
+[1.180s]    12 | #include [01;31m[K<gz/sim/MouseEvent.hh>[m[K
+[1.180s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.181s] compilation terminated.
+[1.183s] [ 76%] Built target LightBuoyPlugin
+[1.192s] gmake[2]: *** [CMakeFiles/target_point_plugin.dir/build.make:76: CMakeFiles/target_point_plugin.dir/src/target_point.cc.o] Error 1
+[1.193s] gmake[1]: *** [CMakeFiles/Makefile2:794: CMakeFiles/target_point_plugin.dir/all] Error 2
+[1.193s] gmake[1]: *** Waiting for unfinished jobs....
+[1.209s] [ 78%] Built target PerceptionScoringPlugin
+[1.226s] [ 82%] Built target WayfindingScoringPlugin
+[1.242s] [ 84%] Built target BallShooterPlugin
+[1.256s] [ 88%] Built target StationkeepingScoringPlugin
+[1.325s] [ 90%] Built target ScanDockScoringPlugin
+[1.434s] running egg_info
+[1.434s] writing vrx_gz.egg-info/PKG-INFO
+[1.435s] writing dependency_links to vrx_gz.egg-info/dependency_links.txt
+[1.435s] writing top-level names to vrx_gz.egg-info/top_level.txt
+[1.438s] reading manifest file 'vrx_gz.egg-info/SOURCES.txt'
+[1.438s] writing manifest file 'vrx_gz.egg-info/SOURCES.txt'
+[1.484s] [ 90%] Built target ament_cmake_python_build_vrx_gz_egg
+[1.491s] [ 92%] Built target Surface
+[1.536s] [ 94%] Built target USVWind
+[1.567s] [ 96%] Built target WaveVisual
+[1.616s] [ 98%] Built target WildlifeScoringPlugin
+[1.617s] gmake: *** [Makefile:146: all] Error 2
+[1.620s] Invoked command in '/home/mrxiuer/project/毕设/demo/src/build/vrx_gz' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble LD_LIBRARY_PATH=/home/mrxiuer/project/毕设/demo/src/install/lib:/usr/local/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/mrxiuer/project/毕设/demo/src/build/vrx_gz -- -j16 -l16

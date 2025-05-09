@@ -1,0 +1,54 @@
+[  4%] Built target Waves
+[  8%] Built target ScoringPlugin
+[ 10%] [32mBuilding CXX object CMakeFiles/target_point_plugin.dir/src/target_point.cc.o[0m
+[ 10%] Built target ament_cmake_python_copy_vrx_gz
+[ 14%] Built target LightBuoyPlugin
+[ 18%] Built target AcousticPingerPlugin
+[ 32%] Built target WayfindingScoringPlugin
+[ 36%] Built target AcousticPerceptionScoringPlugin
+[ 40%] Built target PlacardPlugin
+[ 46%] Built target AcousticTrackingScoringPlugin
+[ 56%] Built target PerceptionScoringPlugin
+[ 58%] Built target GymkhanaScoringPlugin
+[ 56%] Built target NavigationScoringPlugin
+[ 66%] Built target PolyhedraBuoyancyDrag
+[ 66%] Built target StationkeepingScoringPlugin
+[ 70%] Built target BallShooterPlugin
+[ 74%] Built target PublisherPlugin
+[ 82%] Built target ScanDockScoringPlugin
+[ 82%] Built target SimpleHydrodynamics
+[ 86%] Built target Surface
+[ 90%] Built target WildlifeScoringPlugin
+[ 98%] Built target USVWind
+[ 98%] Built target WaveVisual
+running egg_info
+writing vrx_gz.egg-info/PKG-INFO
+writing dependency_links to vrx_gz.egg-info/dependency_links.txt
+writing top-level names to vrx_gz.egg-info/top_level.txt
+reading manifest file 'vrx_gz.egg-info/SOURCES.txt'
+writing manifest file 'vrx_gz.egg-info/SOURCES.txt'
+[ 98%] Built target ament_cmake_python_build_vrx_gz_egg
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:[m[K In constructor ‘[01m[Kgz::gui::TargetPointPlugin::TargetPointPlugin()[m[K’:
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:30:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gz::gui::TargetPointPlugin[m[K’ has no member named ‘[01m[KApp[m[K’
+   30 |       this->[01;31m[KApp[m[K()->findChild<MainWindow*>()->QuickWindow()->contentItem()->addItem(mainWidget);
+      |             [01;31m[K^~~[m[K
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:30:40:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K*[m[K’ token
+   30 |       this->App()->findChild<MainWindow[01;31m[K*[m[K>()->QuickWindow()->contentItem()->addItem(mainWidget);
+      |                                        [01;31m[K^[m[K
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:30:41:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+   30 |       this->App()->findChild<MainWindow*[01;31m[K>[m[K()->QuickWindow()->contentItem()->addItem(mainWidget);
+      |                                         [01;31m[K^[m[K
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:30:43:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K)[m[K’ token
+   30 |       this->App()->findChild<MainWindow*>([01;31m[K)[m[K->QuickWindow()->contentItem()->addItem(mainWidget);
+      |                                           [01;31m[K^[m[K
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:[m[K In member function ‘[01m[Kvoid gz::gui::TargetPointPlugin::Update()[m[K’:
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:50:37:[m[K [01;31m[Kerror: [m[K‘[01m[KsceneFromFirstRenderEngine[m[K’ is not a member of ‘[01m[Kgz::rendering[m[K’
+   50 |         auto scene = gz::rendering::[01;31m[KsceneFromFirstRenderEngine[m[K();
+      |                                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:[m[K At global scope:
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:101:31:[m[K [01;31m[Kerror: [m[Kexpected constructor, destructor, or type conversion at end of input
+  101 |               gz::gui::Plugin)
+      |                               [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/target_point_plugin.dir/build.make:76: CMakeFiles/target_point_plugin.dir/src/target_point.cc.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:794: CMakeFiles/target_point_plugin.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

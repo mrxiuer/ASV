@@ -1,0 +1,77 @@
+ <include>
+      <name>huan_1</name>
+      <pose>-500 208 0 0 0 0</pose> <!-- 设置模型的位置和方向 -->
+      <uri>/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/models/huan/model.sdf</uri> <!-- 模型的路径 -->
+      <static>true</static> <!-- 是否静态 -->
+    </include>
+
+    <include>
+      <name>huan_2</name>
+      <pose>-470 200 0 0 0 -1.42</pose> <!-- 设置模型的位置和方向 -->
+      <uri>/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/models/huan/model.sdf</uri> <!-- 模型的路径 -->
+      <static>true</static> <!-- 是否静态 -->
+    </include>
+
+    <include>
+      <name>huan_3</name>
+      <pose>-400 210 0 0 0 1.57</pose> <!-- 设置模型的位置和方向 -->
+      <uri>/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/models/huan/model.sdf</uri> <!-- 模型的路径 -->
+      <static>true</static> <!-- 是否静态 -->
+    </include>
+
+    <include>
+      <name>huan_4</name>
+      <pose>-300 210 0 0 0 1.57</pose> <!-- 设置模型的位置和方向 -->
+      <uri>/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/models/huan/model.sdf</uri> <!-- 模型的路径 -->
+      <static>true</static> <!-- 是否静态 -->
+    </include>
+
+    <include>
+      <name>huan_5</name>
+      <pose>-330 230 0 0 0 0</pose> <!-- 设置模型的位置和方向 -->
+      <uri>/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/models/huan/model.sdf</uri> <!-- 模型的路径 -->
+      <static>true</static> <!-- 是否静态 -->
+    </include>
+
+    <include>
+      <name>huan_6</name>
+      <pose>-270 240 0 0 0 1.57</pose> <!-- 设置模型的位置和方向 -->
+      <uri>/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/models/huan/model.sdf</uri> <!-- 模型的路径 -->
+      <static>true</static> <!-- 是否静态 -->
+    </include>
+
+
+    <include>
+      <name>huan_7</name>
+      <pose>-350 220 0 0 0 0.57</pose> <!-- 设置模型的位置和方向 -->
+      <uri>/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/models/huan/model.sdf</uri> <!-- 模型的路径 -->
+      <static>true</static> <!-- 是否静态 -->
+    </include>
+
+    <include>
+      <name>huan_8</name>
+      <pose>-470 220 0 0 0 -1.42</pose> <!-- 设置模型的位置和方向 -->
+      <uri>/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/models/huan/model.sdf</uri> <!-- 模型的路径 -->
+      <static>true</static> <!-- 是否静态 -->
+    </include>
+
+    <include>
+      <name>huan_9</name>
+      <pose>-470 180 0 0 0 -1.42</pose> <!-- 设置模型的位置和方向 -->
+      <uri>/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/models/huan/model.sdf</uri> <!-- 模型的路径 -->
+      <static>true</static> <!-- 是否静态 -->
+    </include>
+
+    <include>
+      <name>huan_10</name>
+      <pose>-470 165 0 0 0 -1.42</pose> <!-- 设置模型的位置和方向 -->
+      <uri>/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/models/huan/model.sdf</uri> <!-- 模型的路径 -->
+      <static>true</static> <!-- 是否静态 -->
+    </include>
+
+    <include>
+      <name>huan_11</name>
+      <pose>-470 240 0 0 0 -1.42</pose> <!-- 设置模型的位置和方向 -->
+      <uri>/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/models/huan/model.sdf</uri> <!-- 模型的路径 -->
+      <static>true</static> <!-- 是否静态 -->
+    </include>

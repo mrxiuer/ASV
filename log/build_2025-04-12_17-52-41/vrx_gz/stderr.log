@@ -1,0 +1,27 @@
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:[m[K In constructor ‘[01m[Kgz::gui::TargetPointPlugin::TargetPointPlugin()[m[K’:
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:36:37:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass QQuickWindow[m[K’ has no member named ‘[01m[KaddWidget[m[K’
+   36 |       this->PluginItem()->window()->[01;31m[KaddWidget[m[K(widget);
+      |                                     [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:[m[K In member function ‘[01m[Kvoid gz::gui::TargetPointPlugin::HandleMouseClick(const QPointF&)[m[K’:
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:73:32:[m[K [01;31m[Kerror: [m[K‘[01m[KdefaultEngine[m[K’ is not a member of ‘[01m[Kgz::rendering[m[K’
+   73 |       auto engine = rendering::[01;31m[KdefaultEngine[m[K();
+      |                                [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:95:10:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kusing element_type = class gz::rendering::v7::RayQuery[m[K’ {aka ‘[01m[Kclass gz::rendering::v7::RayQuery[m[K’}
+   95 |       ray[01;31m[K->[m[KSetFromCamera(camera, screenPos);
+      |          [01;31m[K^~[m[K
+In file included from [01m[K/usr/include/gz/rendering7/gz/rendering/RenderEngine.hh:24[m[K,
+                 from [01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:6[m[K:
+[01m[K/usr/include/gz/rendering7/gz/rendering/RenderTypes.hh:80:11:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kusing element_type = class gz::rendering::v7::RayQuery[m[K’ {aka ‘[01m[Kclass gz::rendering::v7::RayQuery[m[K’}
+   80 |     class [01;36m[KRayQuery[m[K;
+      |           [01;36m[K^~~~~~~~[m[K
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:98:24:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kusing element_type = class gz::rendering::v7::RayQuery[m[K’ {aka ‘[01m[Kclass gz::rendering::v7::RayQuery[m[K’}
+   98 |       auto result = ray[01;31m[K->[m[KClosestPoint();
+      |                        [01;31m[K^~[m[K
+In file included from [01m[K/usr/include/gz/rendering7/gz/rendering/RenderEngine.hh:24[m[K,
+                 from [01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:6[m[K:
+[01m[K/usr/include/gz/rendering7/gz/rendering/RenderTypes.hh:80:11:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kusing element_type = class gz::rendering::v7::RayQuery[m[K’ {aka ‘[01m[Kclass gz::rendering::v7::RayQuery[m[K’}
+   80 |     class [01;36m[KRayQuery[m[K;
+      |           [01;36m[K^~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/target_point_plugin.dir/build.make:76: CMakeFiles/target_point_plugin.dir/src/target_point.cc.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:794: CMakeFiles/target_point_plugin.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,93 @@
+[0.008s] Invoking command in '/home/mrxiuer/project/毕设/demo/src/build/vrx_ros': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/mrxiuer/project/毕设/demo/src/vrx/vrx_ros -DCMAKE_INSTALL_PREFIX=/home/mrxiuer/project/毕设/demo/src/install
+[0.098s] -- The C compiler identification is GNU 11.4.0
+[0.177s] -- The CXX compiler identification is GNU 11.4.0
+[0.185s] -- Detecting C compiler ABI info
+[0.250s] -- Detecting C compiler ABI info - done
+[0.255s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.256s] -- Detecting C compile features
+[0.256s] -- Detecting C compile features - done
+[0.259s] -- Detecting CXX compiler ABI info
+[0.332s] -- Detecting CXX compiler ABI info - done
+[0.337s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.338s] -- Detecting CXX compile features
+[0.338s] -- Detecting CXX compile features - done
+[0.340s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.462s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.537s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.571s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.575s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.582s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.592s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.605s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.638s] -- Looking for gz-msgs9 -- found version 9.5.1
+[0.644s] -- Searching for dependencies of gz-msgs9
+[0.817s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.12.4") 
+[0.820s] -- Looking for gz-math7 -- found version 7.5.1
+[0.821s] -- Searching for dependencies of gz-math7
+[0.823s] -- Looking for gz-utils2 -- found version 2.2.1
+[0.823s] -- Searching for dependencies of gz-utils2
+[0.829s] -- Checking for module 'tinyxml2'
+[0.844s] --   Found tinyxml2, version 9.0.0
+[0.887s] -- Looking for gz-transport12 -- found version 12.2.2
+[0.887s] -- Searching for dependencies of gz-transport12
+[0.922s] -- Config-file not installed for ZeroMQ -- checking for pkg-config
+[0.927s] -- Checking for module 'libzmq >= 4'
+[0.945s] --   Found libzmq , version 4.3.4
+[0.988s] -- Found ZeroMQ: TRUE (Required is at least version "4") 
+[0.994s] -- Checking for module 'uuid'
+[1.010s] --   Found uuid, version 2.37.2
+[1.049s] -- Found UUID: TRUE  
+[1.050s] -- Looking for gz-utils2 -- found version 2.2.1
+[1.050s] -- Searching for dependencies of gz-utils2
+[1.050s] -- Searching for <gz-utils2> component [cli]
+[1.052s] -- Looking for gz-utils2-cli -- found version 2.2.1
+[1.053s] -- Searching for dependencies of gz-utils2-cli
+[1.053s] -- Looking for gz-msgs9 -- found version 9.5.1
+[1.064s] -- Found rclcpp: 16.0.11 (/opt/ros/humble/share/rclcpp/cmake)
+[1.108s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.111s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.215s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.248s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.296s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.306s] -- Found Threads: TRUE  
+[1.345s] -- Found ros_gz_interfaces: 0.244.11 (/opt/ros/humble/share/ros_gz_interfaces/cmake)
+[1.363s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.379s] -- Found tf2: 0.25.12 (/opt/ros/humble/share/tf2/cmake)
+[1.393s] -- Found tf2_msgs: 0.25.12 (/opt/ros/humble/share/tf2_msgs/cmake)
+[1.434s] -- Found tf2_ros: 0.25.12 (/opt/ros/humble/share/tf2_ros/cmake)
+[1.533s] -- Configuring done
+[1.547s] -- Generating done
+[1.552s] -- Build files have been written to: /home/mrxiuer/project/毕设/demo/src/build/vrx_ros
+[1.565s] Invoked command in '/home/mrxiuer/project/毕设/demo/src/build/vrx_ros' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/mrxiuer/project/毕设/demo/src/vrx/vrx_ros -DCMAKE_INSTALL_PREFIX=/home/mrxiuer/project/毕设/demo/src/install
+[1.567s] Invoking command in '/home/mrxiuer/project/毕设/demo/src/build/vrx_ros': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/mrxiuer/project/毕设/demo/src/build/vrx_ros -- -j16 -l16
+[1.618s] [ 50%] [32mBuilding CXX object CMakeFiles/pose_tf_broadcaster.dir/src/pose_tf_broadcaster.cc.o[0m
+[1.618s] [ 50%] [32mBuilding CXX object CMakeFiles/optical_frame_publisher.dir/src/optical_frame_publisher.cc.o[0m
+[8.164s] [ 75%] [32m[1mLinking CXX executable pose_tf_broadcaster[0m
+[8.492s] [ 75%] Built target pose_tf_broadcaster
+[10.709s] [100%] [32m[1mLinking CXX executable optical_frame_publisher[0m
+[11.129s] [100%] Built target optical_frame_publisher
+[11.140s] Invoked command in '/home/mrxiuer/project/毕设/demo/src/build/vrx_ros' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/mrxiuer/project/毕设/demo/src/build/vrx_ros -- -j16 -l16
+[11.142s] Invoking command in '/home/mrxiuer/project/毕设/demo/src/build/vrx_ros': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/mrxiuer/project/毕设/demo/src/build/vrx_ros
+[11.148s] -- Install configuration: ""
+[11.148s] -- Installing: /home/mrxiuer/project/毕设/demo/src/install/lib/vrx_ros/optical_frame_publisher
+[11.154s] -- Set runtime path of "/home/mrxiuer/project/毕设/demo/src/install/lib/vrx_ros/optical_frame_publisher" to ""
+[11.154s] -- Installing: /home/mrxiuer/project/毕设/demo/src/install/lib/vrx_ros/pose_tf_broadcaster
+[11.157s] -- Set runtime path of "/home/mrxiuer/project/毕设/demo/src/install/lib/vrx_ros/pose_tf_broadcaster" to ""
+[11.157s] -- Installing: /home/mrxiuer/project/毕设/demo/src/install/share/vrx_ros/launch
+[11.157s] -- Installing: /home/mrxiuer/project/毕设/demo/src/install/share/vrx_ros/launch/monitor_sim.py
+[11.157s] -- Installing: /home/mrxiuer/project/毕设/demo/src/install/share/ament_index/resource_index/package_run_dependencies/vrx_ros
+[11.157s] -- Installing: /home/mrxiuer/project/毕设/demo/src/install/share/ament_index/resource_index/parent_prefix_path/vrx_ros
+[11.157s] -- Installing: /home/mrxiuer/project/毕设/demo/src/install/share/vrx_ros/environment/ament_prefix_path.sh
+[11.158s] -- Installing: /home/mrxiuer/project/毕设/demo/src/install/share/vrx_ros/environment/ament_prefix_path.dsv
+[11.158s] -- Installing: /home/mrxiuer/project/毕设/demo/src/install/share/vrx_ros/environment/path.sh
+[11.158s] -- Installing: /home/mrxiuer/project/毕设/demo/src/install/share/vrx_ros/environment/path.dsv
+[11.158s] -- Installing: /home/mrxiuer/project/毕设/demo/src/install/share/vrx_ros/local_setup.bash
+[11.158s] -- Installing: /home/mrxiuer/project/毕设/demo/src/install/share/vrx_ros/local_setup.sh
+[11.158s] -- Installing: /home/mrxiuer/project/毕设/demo/src/install/share/vrx_ros/local_setup.zsh
+[11.158s] -- Installing: /home/mrxiuer/project/毕设/demo/src/install/share/vrx_ros/local_setup.dsv
+[11.158s] -- Installing: /home/mrxiuer/project/毕设/demo/src/install/share/vrx_ros/package.dsv
+[11.159s] -- Installing: /home/mrxiuer/project/毕设/demo/src/install/share/ament_index/resource_index/packages/vrx_ros
+[11.159s] -- Installing: /home/mrxiuer/project/毕设/demo/src/install/share/vrx_ros/cmake/vrx_rosConfig.cmake
+[11.159s] -- Installing: /home/mrxiuer/project/毕设/demo/src/install/share/vrx_ros/cmake/vrx_rosConfig-version.cmake
+[11.159s] -- Installing: /home/mrxiuer/project/毕设/demo/src/install/share/vrx_ros/package.xml
+[11.161s] Invoked command in '/home/mrxiuer/project/毕设/demo/src/build/vrx_ros' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/mrxiuer/project/毕设/demo/src/build/vrx_ros

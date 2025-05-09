@@ -1,0 +1,270 @@
+[0.011s] Invoking command in '/home/mrxiuer/project/毕设/demo/src/build/vrx_gz': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble LD_LIBRARY_PATH=/home/mrxiuer/project/毕设/demo/src/install/lib:/usr/local/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/mrxiuer/project/毕设/demo/src/build/vrx_gz -- -j16 -l16
+[0.037s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.143s] -- Looking for gz-sim7 -- found version 7.9.0
+[0.147s] -- Searching for dependencies of gz-sim7
+[0.147s] -- Looking for sdformat13 -- found version 13.9.0
+[0.148s] -- Searching for dependencies of sdformat13
+[0.153s] -- Checking for module 'tinyxml2'
+[0.168s] --   Found tinyxml2, version 9.0.0
+[0.207s] -- Looking for gz-math7 -- found version 7.5.1
+[0.207s] -- Searching for dependencies of gz-math7
+[0.207s] -- Looking for gz-utils2 -- found version 2.2.1
+[0.208s] -- Searching for dependencies of gz-utils2
+[0.209s] -- Looking for gz-utils2 -- found version 2.2.1
+[0.209s] -- Searching for dependencies of gz-utils2
+[0.210s] -- Searching for <gz-utils2> component [cli]
+[0.210s] -- Looking for gz-utils2-cli -- found version 2.2.1
+[0.210s] -- Searching for dependencies of gz-utils2-cli
+[0.212s] -- Looking for gz-plugin2 -- found version 2.0.4
+[0.212s] -- Searching for dependencies of gz-plugin2
+[0.212s] -- Looking for gz-utils2 -- found version 2.2.1
+[0.212s] -- Searching for <gz-plugin2> component [loader]
+[0.212s] -- Looking for gz-plugin2-loader -- found version 2.0.4
+[0.212s] -- Searching for dependencies of gz-plugin2-loader
+[0.213s] -- Searching for <gz-plugin2> component [register]
+[0.213s] -- Looking for gz-plugin2-register -- found version 2.0.4
+[0.213s] -- Searching for dependencies of gz-plugin2-register
+[0.214s] -- Looking for gz-transport12 -- found version 12.2.2
+[0.214s] -- Searching for dependencies of gz-transport12
+[0.251s] -- Config-file not installed for ZeroMQ -- checking for pkg-config
+[0.257s] -- Checking for module 'libzmq >= 4'
+[0.274s] --   Found libzmq , version 4.3.4
+[0.326s] -- Checking for module 'uuid'
+[0.341s] --   Found uuid, version 2.37.2
+[0.382s] -- Looking for gz-utils2 -- found version 2.2.1
+[0.382s] -- Looking for gz-msgs9 -- found version 9.5.1
+[0.382s] -- Searching for dependencies of gz-msgs9
+[0.405s] -- Looking for gz-math7 -- found version 7.5.1
+[0.411s] -- Searching for <gz-transport12> component [log]
+[0.411s] -- Looking for gz-transport12-log -- found version 12.2.2
+[0.412s] -- Searching for dependencies of gz-transport12-log
+[0.412s] -- Searching for <gz-transport12> component [parameters]
+[0.412s] -- Looking for gz-transport12-parameters -- found version 12.2.2
+[0.413s] -- Searching for dependencies of gz-transport12-parameters
+[0.414s] -- Looking for gz-msgs9 -- found version 9.5.1
+[0.414s] -- Looking for gz-common5 -- found version 5.7.1
+[0.414s] -- Searching for dependencies of gz-common5
+[0.414s] -- Looking for gz-utils2 -- found version 2.2.1
+[0.415s] -- Looking for dlfcn.h - found
+[0.415s] -- Looking for libdl - found
+[0.423s] -- Searching for <gz-common5> component [profiler]
+[0.424s] -- Looking for gz-common5-profiler -- found version 5.7.1
+[0.424s] -- Searching for dependencies of gz-common5-profiler
+[0.424s] -- Searching for <gz-common5> component [events]
+[0.425s] -- Looking for gz-common5-events -- found version 5.7.1
+[0.425s] -- Searching for dependencies of gz-common5-events
+[0.425s] -- Looking for gz-math7 -- found version 7.5.1
+[0.426s] -- Searching for <gz-common5> component [av]
+[0.426s] -- Looking for gz-common5-av -- found version 5.7.1
+[0.426s] -- Searching for dependencies of gz-common5-av
+[0.434s] -- Checking for module 'libswscale'
+[0.450s] --   Found libswscale, version 5.9.100
+[0.498s] -- Checking for module 'libavdevice >= 56.4.100'
+[0.514s] --   Found libavdevice , version 58.13.100
+[0.569s] -- Checking for module 'libavformat'
+[0.586s] --   Found libavformat, version 58.76.100
+[0.642s] -- Checking for module 'libavcodec'
+[0.660s] --   Found libavcodec, version 58.134.100
+[0.710s] -- Checking for module 'libavutil'
+[0.727s] --   Found libavutil, version 56.70.100
+[0.770s] -- Searching for <gz-common5> component [io]
+[0.770s] -- Looking for gz-common5-io -- found version 5.7.1
+[0.770s] -- Searching for dependencies of gz-common5-io
+[0.771s] -- Looking for gz-fuel_tools8 -- found version 8.2.0
+[0.771s] -- Searching for dependencies of gz-fuel_tools8
+[0.827s] -- Checking for module 'jsoncpp'
+[0.844s] --   Found jsoncpp, version 1.9.5
+[0.895s] -- Checking for module 'libzip'
+[0.913s] --   Found libzip, version 1.7.3
+[0.958s] -- Looking for gz-utils2 -- found version 2.2.1
+[0.958s] -- Looking for gz-common5 -- found version 5.7.1
+[0.958s] -- Searching for dependencies of gz-common5
+[0.959s] -- Looking for gz-utils2 -- found version 2.2.1
+[0.959s] -- Looking for dlfcn.h - found
+[0.959s] -- Looking for libdl - found
+[0.967s] -- Searching for <gz-common5> component [testing]
+[0.968s] -- Looking for gz-common5-testing -- found version 5.7.1
+[0.968s] -- Searching for dependencies of gz-common5-testing
+[0.969s] -- Looking for gz-math7 -- found version 7.5.1
+[0.969s] -- Looking for gz-msgs9 -- found version 9.5.1
+[0.970s] -- Looking for gz-gui7 -- found version 7.2.2
+[0.970s] -- Searching for dependencies of gz-gui7
+[0.999s] -- Looking for gz-utils2 -- found version 2.2.1
+[1.000s] -- Looking for gz-math7 -- found version 7.5.1
+[1.000s] -- Looking for gz-common5 -- found version 5.7.1
+[1.000s] -- Looking for gz-plugin2 -- found version 2.0.4
+[1.001s] -- Looking for gz-transport12 -- found version 12.2.2
+[1.001s] -- Looking for gz-rendering7 -- found version 7.5.0
+[1.001s] -- Searching for dependencies of gz-rendering7
+[1.002s] -- Looking for gz-math7 -- found version 7.5.1
+[1.002s] -- Searching for dependencies of gz-math7
+[1.002s] -- Looking for gz-utils2 -- found version 2.2.1
+[1.003s] -- Searching for <gz-math7> component [eigen3]
+[1.003s] -- Looking for gz-math7-eigen3 -- found version 7.5.1
+[1.003s] -- Searching for dependencies of gz-math7-eigen3
+[1.004s] -- Looking for gz-common5 -- found version 5.7.1
+[1.005s] -- Searching for dependencies of gz-common5
+[1.005s] -- Looking for gz-utils2 -- found version 2.2.1
+[1.005s] -- Looking for dlfcn.h - found
+[1.005s] -- Looking for libdl - found
+[1.013s] -- Searching for <gz-common5> component [graphics]
+[1.013s] -- Looking for gz-common5-graphics -- found version 5.7.1
+[1.014s] -- Searching for dependencies of gz-common5-graphics
+[1.014s] -- Looking for gz-math7 -- found version 7.5.1
+[1.016s] -- Searching for <gz-common5> component [events]
+[1.017s] -- Searching for <gz-common5> component [geospatial]
+[1.017s] -- Looking for gz-common5-geospatial -- found version 5.7.1
+[1.017s] -- Searching for dependencies of gz-common5-geospatial
+[1.017s] -- Looking for gz-math7 -- found version 7.5.1
+[1.018s] -- Looking for gz-common5 -- found version 5.7.1
+[1.018s] -- Looking for gz-plugin2 -- found version 2.0.4
+[1.019s] -- Searching for dependencies of gz-plugin2
+[1.019s] -- Looking for gz-utils2 -- found version 2.2.1
+[1.019s] -- Searching for <gz-plugin2> component [all]
+[1.019s] -- Looking for all libraries of gz-plugin2 -- found version 2.0.4
+[1.020s] -- Looking for gz-plugin2 -- found version 2.0.4
+[1.021s] -- Looking for gz-utils2 -- found version 2.2.1
+[1.023s] -- Looking for gz-msgs9 -- found version 9.5.1
+[1.035s] -- Looking for gz-physics6 -- found version 6.7.0
+[1.036s] -- Searching for dependencies of gz-physics6
+[1.036s] -- Looking for gz-common5 -- found version 5.7.1
+[1.036s] -- Looking for gz-math7 -- found version 7.5.1
+[1.036s] -- Looking for gz-plugin2 -- found version 2.0.4
+[1.037s] -- Looking for gz-utils2 -- found version 2.2.1
+[1.038s] -- Searching for <gz-physics6> component [heightmap]
+[1.038s] -- Looking for gz-physics6-heightmap -- found version 6.7.0
+[1.038s] -- Searching for dependencies of gz-physics6-heightmap
+[1.039s] -- Looking for gz-common5 -- found version 5.7.1
+[1.039s] -- Searching for <gz-physics6> component [mesh]
+[1.039s] -- Looking for gz-physics6-mesh -- found version 6.7.0
+[1.039s] -- Searching for dependencies of gz-physics6-mesh
+[1.040s] -- Looking for gz-common5 -- found version 5.7.1
+[1.040s] -- Searching for <gz-physics6> component [sdf]
+[1.040s] -- Looking for gz-physics6-sdf -- found version 6.7.0
+[1.041s] -- Searching for dependencies of gz-physics6-sdf
+[1.041s] -- Looking for sdformat13 -- found version 13.9.0
+[1.041s] -- Looking for gz-sensors7 -- found version 7.3.1
+[1.042s] -- Searching for dependencies of gz-sensors7
+[1.063s] -- Looking for gz-math7 -- found version 7.5.1
+[1.063s] -- Looking for gz-common5 -- found version 5.7.1
+[1.064s] -- Looking for gz-transport12 -- found version 12.2.2
+[1.064s] -- Looking for gz-rendering7 -- found version 7.5.0
+[1.064s] -- Looking for gz-msgs9 -- found version 9.5.1
+[1.065s] -- Looking for sdformat13 -- found version 13.9.0
+[1.065s] -- Searching for <gz-sensors7> component [air_pressure]
+[1.065s] -- Looking for gz-sensors7-air_pressure -- found version 7.3.1
+[1.066s] -- Searching for dependencies of gz-sensors7-air_pressure
+[1.066s] -- Searching for <gz-sensors7> component [air_speed]
+[1.066s] -- Looking for gz-sensors7-air_speed -- found version 7.3.1
+[1.067s] -- Searching for dependencies of gz-sensors7-air_speed
+[1.067s] -- Searching for <gz-sensors7> component [altimeter]
+[1.067s] -- Looking for gz-sensors7-altimeter -- found version 7.3.1
+[1.068s] -- Searching for dependencies of gz-sensors7-altimeter
+[1.068s] -- Searching for <gz-sensors7> component [imu]
+[1.068s] -- Looking for gz-sensors7-imu -- found version 7.3.1
+[1.069s] -- Searching for dependencies of gz-sensors7-imu
+[1.069s] -- Searching for <gz-sensors7> component [force_torque]
+[1.069s] -- Looking for gz-sensors7-force_torque -- found version 7.3.1
+[1.070s] -- Searching for dependencies of gz-sensors7-force_torque
+[1.070s] -- Searching for <gz-sensors7> component [logical_camera]
+[1.070s] -- Looking for gz-sensors7-logical_camera -- found version 7.3.1
+[1.071s] -- Searching for dependencies of gz-sensors7-logical_camera
+[1.071s] -- Searching for <gz-sensors7> component [magnetometer]
+[1.071s] -- Looking for gz-sensors7-magnetometer -- found version 7.3.1
+[1.072s] -- Searching for dependencies of gz-sensors7-magnetometer
+[1.072s] -- Searching for <gz-sensors7> component [navsat]
+[1.072s] -- Looking for gz-sensors7-navsat -- found version 7.3.1
+[1.072s] -- Searching for dependencies of gz-sensors7-navsat
+[1.073s] -- Searching for <gz-sensors7> component [rendering]
+[1.073s] -- Looking for gz-sensors7-rendering -- found version 7.3.1
+[1.073s] -- Searching for dependencies of gz-sensors7-rendering
+[1.074s] -- Searching for <gz-sensors7> component [lidar]
+[1.074s] -- Looking for gz-sensors7-lidar -- found version 7.3.1
+[1.074s] -- Searching for dependencies of gz-sensors7-lidar
+[1.075s] -- Looking for gz-sensors7 -- found version 7.3.1
+[1.075s] -- Searching for <gz-sensors7> component [gpu_lidar]
+[1.075s] -- Looking for gz-sensors7-gpu_lidar -- found version 7.3.1
+[1.076s] -- Searching for dependencies of gz-sensors7-gpu_lidar
+[1.076s] -- Looking for gz-sensors7 -- found version 7.3.1
+[1.076s] -- Searching for <gz-sensors7> component [camera]
+[1.077s] -- Looking for gz-sensors7-camera -- found version 7.3.1
+[1.077s] -- Searching for dependencies of gz-sensors7-camera
+[1.077s] -- Looking for gz-sensors7 -- found version 7.3.1
+[1.078s] -- Searching for <gz-sensors7> component [boundingbox_camera]
+[1.078s] -- Looking for gz-sensors7-boundingbox_camera -- found version 7.3.1
+[1.078s] -- Searching for dependencies of gz-sensors7-boundingbox_camera
+[1.079s] -- Searching for <gz-sensors7> component [segmentation_camera]
+[1.079s] -- Looking for gz-sensors7-segmentation_camera -- found version 7.3.1
+[1.079s] -- Searching for dependencies of gz-sensors7-segmentation_camera
+[1.079s] -- Searching for <gz-sensors7> component [depth_camera]
+[1.080s] -- Looking for gz-sensors7-depth_camera -- found version 7.3.1
+[1.080s] -- Searching for dependencies of gz-sensors7-depth_camera
+[1.080s] -- Looking for gz-sensors7 -- found version 7.3.1
+[1.081s] -- Searching for <gz-sensors7> component [rgbd_camera]
+[1.081s] -- Looking for gz-sensors7-rgbd_camera -- found version 7.3.1
+[1.081s] -- Searching for dependencies of gz-sensors7-rgbd_camera
+[1.082s] -- Looking for gz-sensors7 -- found version 7.3.1
+[1.082s] -- Searching for <gz-sensors7> component [thermal_camera]
+[1.082s] -- Looking for gz-sensors7-thermal_camera -- found version 7.3.1
+[1.083s] -- Searching for dependencies of gz-sensors7-thermal_camera
+[1.083s] -- Looking for gz-sensors7 -- found version 7.3.1
+[1.083s] -- Searching for <gz-sensors7> component [wide_angle_camera]
+[1.084s] -- Looking for gz-sensors7-wide_angle_camera -- found version 7.3.1
+[1.084s] -- Searching for dependencies of gz-sensors7-wide_angle_camera
+[1.085s] -- Looking for gz-rendering7 -- found version 7.5.0
+[1.085s] -- Looking for gz-math7 -- found version 7.5.1
+[1.085s] -- Looking for gz-utils2 -- found version 2.2.1
+[1.108s] -- Looking for gz-common5 -- found version 5.7.1
+[1.108s] -- Looking for gz-fuel_tools8 -- found version 8.2.0
+[1.108s] -- Looking for gz-math7 -- found version 7.5.1
+[1.108s] -- Looking for gz-msgs9 -- found version 9.5.1
+[1.109s] -- Looking for gz-transport12 -- found version 12.2.2
+[1.109s] -- Looking for gz-plugin2 -- found version 2.0.4
+[1.109s] -- Looking for gz-rendering7 -- found version 7.5.0
+[1.110s] -- Looking for gz-sensors7 -- found version 7.3.1
+[1.110s] -- Looking for gz-utils2 -- found version 2.2.1
+[1.110s] -- Looking for sdformat13 -- found version 13.9.0
+[1.111s] -- Found std_msgs: 4.2.4 (/opt/ros/humble/share/std_msgs/cmake)
+[1.125s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.127s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.132s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.139s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.148s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.279s] -- Looking for gz-rendering7 -- found version 7.5.0
+[1.281s] -- Looking for gz-transport14 -- found version 14.0.1
+[1.289s] -- Searching for dependencies of gz-transport14
+[1.325s] -- Config-file not installed for ZeroMQ -- checking for pkg-config
+[1.332s] -- Checking for module 'libzmq >= 4'
+[1.349s] --   Found libzmq , version 4.3.4
+[1.403s] -- Looking for gz-utils3 -- found version 3.1.1
+[1.403s] -- Searching for dependencies of gz-utils3
+[1.403s] -- Searching for <gz-utils3> component [cli]
+[1.406s] -- Looking for gz-utils3-cli -- found version 3.1.1
+[1.406s] -- Searching for dependencies of gz-utils3-cli
+[1.409s] -- Looking for gz-msgs11 -- found version 11.0.2
+[1.409s] -- Searching for dependencies of gz-msgs11
+[1.431s] -- Looking for gz-utils3 -- found version 3.1.1
+[1.433s] -- Looking for gz-math8 -- found version 8.1.1
+[1.434s] -- Searching for dependencies of gz-math8
+[1.434s] -- Looking for gz-utils3 -- found version 3.1.1
+[1.455s] [31mCMake Error at CMakeLists.txt:200 (find_package):
+[1.455s]   By not providing "Findgz-common7.cmake" in CMAKE_MODULE_PATH this project
+[1.455s]   has asked CMake to find a package configuration file provided by
+[1.456s]   "gz-common7", but CMake did not find one.
+[1.456s] 
+[1.456s]   Could not find a package configuration file provided by "gz-common7" with
+[1.456s]   any of the following names:
+[1.456s] 
+[1.456s]     gz-common7Config.cmake
+[1.456s]     gz-common7-config.cmake
+[1.456s] 
+[1.456s]   Add the installation prefix of "gz-common7" to CMAKE_PREFIX_PATH or set
+[1.456s]   "gz-common7_DIR" to a directory containing one of the above files.  If
+[1.456s]   "gz-common7" provides a separate development package or SDK, be sure it has
+[1.456s]   been installed.
+[1.456s] 
+[1.456s] [0m
+[1.456s] -- Configuring incomplete, errors occurred!
+[1.456s] See also "/home/mrxiuer/project/毕设/demo/src/build/vrx_gz/CMakeFiles/CMakeOutput.log".
+[1.468s] gmake: *** [Makefile:1246: cmake_check_build_system] Error 1
+[1.470s] Invoked command in '/home/mrxiuer/project/毕设/demo/src/build/vrx_gz' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble LD_LIBRARY_PATH=/home/mrxiuer/project/毕设/demo/src/install/lib:/usr/local/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/mrxiuer/project/毕设/demo/src/build/vrx_gz -- -j16 -l16

@@ -1,0 +1,48 @@
+[  8%] Built target ScoringPlugin
+[  8%] Built target Waves
+[ 10%] [32mBuilding CXX object CMakeFiles/target_point_plugin.dir/src/target_point.cc.o[0m
+[ 10%] Built target ament_cmake_python_copy_vrx_gz
+[ 14%] Built target AcousticPingerPlugin
+[ 26%] Built target LightBuoyPlugin
+[ 30%] Built target GymkhanaScoringPlugin
+[ 32%] Built target WayfindingScoringPlugin
+[ 32%] Built target PerceptionScoringPlugin
+[ 42%] Built target AcousticTrackingScoringPlugin
+[ 44%] Built target PlacardPlugin
+[ 48%] Built target StationkeepingScoringPlugin
+[ 52%] Built target PublisherPlugin
+[ 58%] Built target SimpleHydrodynamics
+[ 60%] Built target BallShooterPlugin
+[ 64%] Built target Surface
+[ 68%] Built target ScanDockScoringPlugin
+[ 72%] Built target NavigationScoringPlugin
+[ 78%] Built target AcousticPerceptionScoringPlugin
+[ 82%] Built target WildlifeScoringPlugin
+[ 86%] Built target WaveVisual
+[ 94%] Built target PolyhedraBuoyancyDrag
+[ 98%] Built target USVWind
+running egg_info
+writing vrx_gz.egg-info/PKG-INFO
+writing dependency_links to vrx_gz.egg-info/dependency_links.txt
+writing top-level names to vrx_gz.egg-info/top_level.txt
+reading manifest file 'vrx_gz.egg-info/SOURCES.txt'
+writing manifest file 'vrx_gz.egg-info/SOURCES.txt'
+[ 98%] Built target ament_cmake_python_build_vrx_gz_egg
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:[m[K In constructor ‘[01m[Kgz::gui::TargetPointPlugin::TargetPointPlugin()[m[K’:
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:32:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass QQuickItem[m[K’ has no member named ‘[01m[KaddItem[m[K’
+   32 |       win->contentItem()->[01;31m[KaddItem[m[K(mainWidget);
+      |                           [01;31m[K^~~~~~~[m[K
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:[m[K In member function ‘[01m[Kvoid gz::gui::TargetPointPlugin::OnClick(const QPointF&)[m[K’:
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:68:35:[m[K [01;31m[Kerror: [m[K‘[01m[KsceneFromFirstRenderEngine[m[K’ is not a member of ‘[01m[Kgz::rendering[m[K’
+   68 |       auto scene = gz::rendering::[01;31m[KsceneFromFirstRenderEngine[m[K();
+      |                                   [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:79:31:[m[K [01;31m[Kerror: [m[Kaggregate ‘[01m[Kgz::rendering::v7::RayQuery rayQuery[m[K’ has incomplete type and cannot be defined
+   79 |       gz::rendering::RayQuery [01;31m[KrayQuery[m[K;
+      |                               [01;31m[K^~~~~~~~[m[K
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:[m[K At global scope:
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:116:59:[m[K [01;31m[Kerror: [m[Kexpected constructor, destructor, or type conversion at end of input
+  116 | GZ_ADD_PLUGIN(gz::gui::TargetPointPlugin, gz::gui::Plugin)
+      |                                                           [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/target_point_plugin.dir/build.make:76: CMakeFiles/target_point_plugin.dir/src/target_point.cc.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:794: CMakeFiles/target_point_plugin.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

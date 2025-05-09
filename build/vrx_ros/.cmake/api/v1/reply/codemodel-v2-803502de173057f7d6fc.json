@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-1390a76af8cf7689ab4e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10.2"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "vrx_ros",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "optical_frame_publisher::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-optical_frame_publisher-3c6a3aa828aa79c2cada.json",
+					"name" : "optical_frame_publisher",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "pose_tf_broadcaster::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-pose_tf_broadcaster-6d8ecbc1c3a3f10b29cf.json",
+					"name" : "pose_tf_broadcaster",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-8f4b80224227f096c9aa.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "vrx_ros_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-vrx_ros_uninstall-e9f38b978b935b33cb1f.json",
+					"name" : "vrx_ros_uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/mrxiuer/project/\u6bd5\u8bbe/demo/src/build/vrx_ros",
+		"source" : "/home/mrxiuer/project/\u6bd5\u8bbe/demo/src/vrx/vrx_ros"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

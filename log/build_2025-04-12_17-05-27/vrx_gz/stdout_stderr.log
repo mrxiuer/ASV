@@ -1,0 +1,75 @@
+[35m[1mConsolidate compiler generated dependencies of target target_point_plugin[0m
+[  4%] Built target Waves
+[  8%] Built target ScoringPlugin
+[  8%] Built target ament_cmake_python_copy_vrx_gz
+[ 10%] [32mBuilding CXX object CMakeFiles/target_point_plugin.dir/src/target_point.cc.o[0m
+[ 26%] Built target WayfindingScoringPlugin
+[ 26%] Built target StationkeepingScoringPlugin
+[ 26%] Built target BallShooterPlugin
+[ 30%] Built target NavigationScoringPlugin
+[ 42%] Built target AcousticPingerPlugin
+[ 42%] Built target PerceptionScoringPlugin
+[ 42%] Built target LightBuoyPlugin
+[ 50%] Built target AcousticPerceptionScoringPlugin
+[ 62%] Built target PolyhedraBuoyancyDrag
+[ 64%] Built target GymkhanaScoringPlugin
+[ 68%] Built target PublisherPlugin
+[ 70%] Built target AcousticTrackingScoringPlugin
+[ 74%] Built target PlacardPlugin
+[ 78%] Built target ScanDockScoringPlugin
+[ 82%] Built target SimpleHydrodynamics
+[ 86%] Built target Surface
+[ 90%] Built target WildlifeScoringPlugin
+[ 94%] Built target WaveVisual
+[ 98%] Built target USVWind
+running egg_info
+writing vrx_gz.egg-info/PKG-INFO
+writing dependency_links to vrx_gz.egg-info/dependency_links.txt
+writing top-level names to vrx_gz.egg-info/top_level.txt
+reading manifest file 'vrx_gz.egg-info/SOURCES.txt'
+writing manifest file 'vrx_gz.egg-info/SOURCES.txt'
+[ 98%] Built target ament_cmake_python_build_vrx_gz_egg
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:[m[K In constructor ‘[01m[Kgz_sim::TargetPointPlugin::TargetPointPlugin()[m[K’:
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:22:27:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K([m[K’ token
+   22 |       : gz::gui::GuiPlugin[01;31m[K([m[K)
+      |                           [01;31m[K^[m[K
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:22:27:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[K([m[K’ token
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:[m[K In member function ‘[01m[Kvoid gz_sim::TargetPointPlugin::OnButtonClicked()[m[K’:
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:42:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kgzdbg[m[K’ was not declared in this scope
+   42 |       [01;31m[Kgzdbg[m[K << "目标点标记模式已启用，请点击地面。" << std::endl;
+      |       [01;31m[K^~~~~[m[K
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:[m[K In member function ‘[01m[Kvoid gz_sim::TargetPointPlugin::Update()[m[K’:
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:55:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kgzerr[m[K’ was not declared in this scope
+   55 |         [01;31m[Kgzerr[m[K << "无法获取渲染场景。" << std::endl;
+      |         [01;31m[K^~~~~[m[K
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:60:62:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+   60 |       auto camera = scene->SensorByName<gz::rendering::Camera[01;31m[K>[m[K("user_camera");
+      |                                                              [01;31m[K^[m[K
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:63:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kgzerr[m[K’ was not declared in this scope
+   63 |         [01;31m[Kgzerr[m[K << "无法获取用户相机。" << std::endl;
+      |         [01;31m[K^~~~~[m[K
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:69:49:[m[K [01;31m[Kerror: [m[K‘[01m[Kgz::rendering::MouseEvent[m[K’ has not been declared
+   69 |       if (mouseEvent.Button() == gz::rendering::[01;31m[KMouseEvent[m[K::LEFT &&
+      |                                                 [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:70:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kgz::rendering::MouseEvent[m[K’ has not been declared
+   70 |           mouseEvent.Type() == gz::rendering::[01;31m[KMouseEvent[m[K::PRESS)
+      |                                               [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:74:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kgzdbg[m[K’ was not declared in this scope
+   74 |         [01;31m[Kgzdbg[m[K << "目标点位置: " << position << std::endl;
+      |         [01;31m[K^~~~~[m[K
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:89:20:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gz::transport::v12::Node[m[K’ has no member named ‘[01m[KPublish[m[K’; did you mean ‘[01m[KPublisher[m[K’?
+   89 |         this->node.[01;31m[KPublish[m[K("/marker", markerMsg);
+      |                    [01;31m[K^~~~~~~[m[K
+      |                    [32m[KPublisher[m[K
+In file included from [01m[K/usr/include/gz/plugin2/gz/plugin/Register.hh:22[m[K,
+                 from [01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:6[m[K:
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:[m[K In constructor ‘[01m[Kgz::plugin::{anonymous}::ExecuteWhenLoadingLibrary0::ExecuteWhenLoadingLibrary0()[m[K’:
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:107:24:[m[K [01;31m[Kerror: [m[K‘[01m[KGuiPlugin[m[K’ is not a member of ‘[01m[Kgz::gui[m[K’; did you mean ‘[01m[KPlugin[m[K’?
+  107 |               gz::gui::[01;31m[KGuiPlugin[m[K)
+      |                        [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:106:1:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+  106 | [01;31m[KGZ_ADD_PLUGIN[m[K(gz_sim::TargetPointPlugin,
+      | [01;31m[K^~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/target_point_plugin.dir/build.make:76: CMakeFiles/target_point_plugin.dir/src/target_point.cc.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:794: CMakeFiles/target_point_plugin.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,34 @@
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:[m[K In constructor ‘[01m[Kgz_sim::TargetPointPlugin::TargetPointPlugin()[m[K’:
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:32:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gz_sim::TargetPointPlugin[m[K’ has no member named ‘[01m[KsetLayout[m[K’
+   32 |       this->[01;31m[KsetLayout[m[K(mainLayout);
+      |             [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:[m[K In member function ‘[01m[Kvoid gz_sim::TargetPointPlugin::OnButtonClicked()[m[K’:
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:42:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kgzdbg[m[K’ was not declared in this scope
+   42 |       [01;31m[Kgzdbg[m[K << "目标点标记模式已启用，请点击地面。" << std::endl;
+      |       [01;31m[K^~~~~[m[K
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:[m[K In member function ‘[01m[Kvoid gz_sim::TargetPointPlugin::Update()[m[K’:
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:55:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kgzerr[m[K’ was not declared in this scope
+   55 |         [01;31m[Kgzerr[m[K << "无法获取渲染场景。" << std::endl;
+      |         [01;31m[K^~~~~[m[K
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:60:62:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+   60 |       auto camera = scene->SensorByName<gz::rendering::Camera[01;31m[K>[m[K("user_camera");
+      |                                                              [01;31m[K^[m[K
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:63:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kgzerr[m[K’ was not declared in this scope
+   63 |         [01;31m[Kgzerr[m[K << "无法获取用户相机。" << std::endl;
+      |         [01;31m[K^~~~~[m[K
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:69:49:[m[K [01;31m[Kerror: [m[K‘[01m[Kgz::rendering::MouseEvent[m[K’ has not been declared
+   69 |       if (mouseEvent.Button() == gz::rendering::[01;31m[KMouseEvent[m[K::LEFT &&
+      |                                                 [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:70:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kgz::rendering::MouseEvent[m[K’ has not been declared
+   70 |           mouseEvent.Type() == gz::rendering::[01;31m[KMouseEvent[m[K::PRESS)
+      |                                               [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:74:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kgzdbg[m[K’ was not declared in this scope
+   74 |         [01;31m[Kgzdbg[m[K << "目标点位置: " << position << std::endl;
+      |         [01;31m[K^~~~~[m[K
+[01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:89:20:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gz::transport::v12::Node[m[K’ has no member named ‘[01m[KPublish[m[K’; did you mean ‘[01m[KPublisher[m[K’?
+   89 |         this->node.[01;31m[KPublish[m[K("/marker", markerMsg);
+      |                    [01;31m[K^~~~~~~[m[K
+      |                    [32m[KPublisher[m[K
+gmake[2]: *** [CMakeFiles/target_point_plugin.dir/build.make:76: CMakeFiles/target_point_plugin.dir/src/target_point.cc.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:794: CMakeFiles/target_point_plugin.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

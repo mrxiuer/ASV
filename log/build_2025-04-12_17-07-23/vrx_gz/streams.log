@@ -1,0 +1,30 @@
+[0.010s] Invoking command in '/home/mrxiuer/project/毕设/demo/src/build/vrx_gz': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble LD_LIBRARY_PATH=/home/mrxiuer/project/毕设/demo/src/install/lib:/usr/local/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/mrxiuer/project/毕设/demo/src/build/vrx_gz -- -j16 -l16
+[0.057s] [35m[1mConsolidate compiler generated dependencies of target target_point_plugin[0m
+[0.070s] [  4%] Built target Waves
+[0.071s] [  8%] Built target ScoringPlugin
+[0.080s] [  8%] Built target ament_cmake_python_copy_vrx_gz
+[0.081s] [ 10%] [32mBuilding CXX object CMakeFiles/target_point_plugin.dir/src/target_point.cc.o[0m
+[0.099s] [01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:1:10:[m[K [01;31m[Kfatal error: [m[Kgz/gui/GuiPlugin.hh: No such file or directory
+[0.099s]     1 | #include [01;31m[K<gz/gui/GuiPlugin.hh>[m[K
+[0.100s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[0.100s] compilation terminated.
+[0.102s] gmake[2]: *** [CMakeFiles/target_point_plugin.dir/build.make:76: CMakeFiles/target_point_plugin.dir/src/target_point.cc.o] Error 1
+[0.102s] gmake[1]: *** [CMakeFiles/Makefile2:794: CMakeFiles/target_point_plugin.dir/all] Error 2
+[0.102s] gmake[1]: *** Waiting for unfinished jobs....
+[0.112s] [ 22%] Built target PolyhedraBuoyancyDrag
+[0.113s] [ 20%] Built target AcousticPingerPlugin
+[0.114s] [ 38%] Built target BallShooterPlugin
+[0.114s] [ 38%] Built target StationkeepingScoringPlugin
+[0.114s] [ 38%] Built target WayfindingScoringPlugin
+[0.116s] [ 44%] Built target AcousticTrackingScoringPlugin
+[0.116s] [ 50%] Built target AcousticPerceptionScoringPlugin
+[0.116s] [ 58%] Built target GymkhanaScoringPlugin
+[0.116s] [ 58%] Built target NavigationScoringPlugin
+[0.118s] [ 62%] Built target LightBuoyPlugin
+[0.118s] [ 66%] Built target PerceptionScoringPlugin
+[0.118s] [ 74%] Built target PublisherPlugin
+[0.118s] [ 74%] Built target PlacardPlugin
+[0.119s] [ 78%] Built target SimpleHydrodynamics
+[0.122s] [ 82%] Built target ScanDockScoringPlugin
+[0.124s] gmake: *** [Makefile:146: all] Error 2
+[0.126s] Invoked command in '/home/mrxiuer/project/毕设/demo/src/build/vrx_gz' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble LD_LIBRARY_PATH=/home/mrxiuer/project/毕设/demo/src/install/lib:/usr/local/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/mrxiuer/project/毕设/demo/src/build/vrx_gz -- -j16 -l16

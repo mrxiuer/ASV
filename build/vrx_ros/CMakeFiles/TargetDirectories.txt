@@ -1,0 +1,11 @@
+/home/mrxiuer/project/毕设/demo/src/build/vrx_ros/CMakeFiles/uninstall.dir
+/home/mrxiuer/project/毕设/demo/src/build/vrx_ros/CMakeFiles/vrx_ros_uninstall.dir
+/home/mrxiuer/project/毕设/demo/src/build/vrx_ros/CMakeFiles/optical_frame_publisher.dir
+/home/mrxiuer/project/毕设/demo/src/build/vrx_ros/CMakeFiles/pose_tf_broadcaster.dir
+/home/mrxiuer/project/毕设/demo/src/build/vrx_ros/CMakeFiles/test.dir
+/home/mrxiuer/project/毕设/demo/src/build/vrx_ros/CMakeFiles/edit_cache.dir
+/home/mrxiuer/project/毕设/demo/src/build/vrx_ros/CMakeFiles/rebuild_cache.dir
+/home/mrxiuer/project/毕设/demo/src/build/vrx_ros/CMakeFiles/list_install_components.dir
+/home/mrxiuer/project/毕设/demo/src/build/vrx_ros/CMakeFiles/install.dir
+/home/mrxiuer/project/毕设/demo/src/build/vrx_ros/CMakeFiles/install/local.dir
+/home/mrxiuer/project/毕设/demo/src/build/vrx_ros/CMakeFiles/install/strip.dir

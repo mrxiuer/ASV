@@ -1,0 +1,11 @@
+/home/mrxiuer/project/毕设/demo/src/build/vrx_gazebo/CMakeFiles/uninstall.dir
+/home/mrxiuer/project/毕设/demo/src/build/vrx_gazebo/CMakeFiles/vrx_gazebo_uninstall.dir
+/home/mrxiuer/project/毕设/demo/src/build/vrx_gazebo/CMakeFiles/ament_cmake_python_copy_vrx_gazebo.dir
+/home/mrxiuer/project/毕设/demo/src/build/vrx_gazebo/CMakeFiles/ament_cmake_python_build_vrx_gazebo_egg.dir
+/home/mrxiuer/project/毕设/demo/src/build/vrx_gazebo/CMakeFiles/test.dir
+/home/mrxiuer/project/毕设/demo/src/build/vrx_gazebo/CMakeFiles/edit_cache.dir
+/home/mrxiuer/project/毕设/demo/src/build/vrx_gazebo/CMakeFiles/rebuild_cache.dir
+/home/mrxiuer/project/毕设/demo/src/build/vrx_gazebo/CMakeFiles/list_install_components.dir
+/home/mrxiuer/project/毕设/demo/src/build/vrx_gazebo/CMakeFiles/install.dir
+/home/mrxiuer/project/毕设/demo/src/build/vrx_gazebo/CMakeFiles/install/local.dir
+/home/mrxiuer/project/毕设/demo/src/build/vrx_gazebo/CMakeFiles/install/strip.dir

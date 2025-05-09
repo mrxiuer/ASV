@@ -1,0 +1,31 @@
+[35m[1mConsolidate compiler generated dependencies of target target_point_plugin[0m
+[  4%] Built target Waves
+[  8%] Built target ScoringPlugin
+[  8%] Built target ament_cmake_python_copy_vrx_gz
+[ 10%] [32mBuilding CXX object CMakeFiles/target_point_plugin.dir/src/target_point.cc.o[0m
+[ 26%] Built target WayfindingScoringPlugin
+[ 26%] Built target StationkeepingScoringPlugin
+[ 26%] Built target BallShooterPlugin
+[ 30%] Built target NavigationScoringPlugin
+[ 42%] Built target AcousticPingerPlugin
+[ 42%] Built target PerceptionScoringPlugin
+[ 42%] Built target LightBuoyPlugin
+[ 50%] Built target AcousticPerceptionScoringPlugin
+[ 62%] Built target PolyhedraBuoyancyDrag
+[ 64%] Built target GymkhanaScoringPlugin
+[ 68%] Built target PublisherPlugin
+[ 70%] Built target AcousticTrackingScoringPlugin
+[ 74%] Built target PlacardPlugin
+[ 78%] Built target ScanDockScoringPlugin
+[ 82%] Built target SimpleHydrodynamics
+[ 86%] Built target Surface
+[ 90%] Built target WildlifeScoringPlugin
+[ 94%] Built target WaveVisual
+[ 98%] Built target USVWind
+running egg_info
+writing vrx_gz.egg-info/PKG-INFO
+writing dependency_links to vrx_gz.egg-info/dependency_links.txt
+writing top-level names to vrx_gz.egg-info/top_level.txt
+reading manifest file 'vrx_gz.egg-info/SOURCES.txt'
+writing manifest file 'vrx_gz.egg-info/SOURCES.txt'
+[ 98%] Built target ament_cmake_python_build_vrx_gz_egg

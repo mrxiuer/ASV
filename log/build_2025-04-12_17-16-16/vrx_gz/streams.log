@@ -1,0 +1,56 @@
+[0.010s] Invoking command in '/home/mrxiuer/project/毕设/demo/src/build/vrx_gz': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble LD_LIBRARY_PATH=/home/mrxiuer/project/毕设/demo/src/install/lib:/usr/local/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/mrxiuer/project/毕设/demo/src/build/vrx_gz -- -j16 -l16
+[0.070s] [  4%] Built target Waves
+[0.070s] [  8%] Built target ScoringPlugin
+[0.071s] [ 10%] [32mBuilding CXX object CMakeFiles/target_point_plugin.dir/src/target_point.cc.o[0m
+[0.077s] [ 10%] Built target ament_cmake_python_copy_vrx_gz
+[0.107s] [ 14%] Built target LightBuoyPlugin
+[0.108s] [ 18%] Built target AcousticPingerPlugin
+[0.109s] [ 32%] Built target WayfindingScoringPlugin
+[0.109s] [ 36%] Built target AcousticPerceptionScoringPlugin
+[0.110s] [ 40%] Built target PlacardPlugin
+[0.110s] [ 46%] Built target AcousticTrackingScoringPlugin
+[0.112s] [ 56%] Built target PerceptionScoringPlugin
+[0.112s] [ 58%] Built target GymkhanaScoringPlugin
+[0.112s] [ 56%] Built target NavigationScoringPlugin
+[0.112s] [ 66%] Built target PolyhedraBuoyancyDrag
+[0.113s] [ 66%] Built target StationkeepingScoringPlugin
+[0.113s] [ 70%] Built target BallShooterPlugin
+[0.114s] [ 74%] Built target PublisherPlugin
+[0.122s] [ 82%] Built target ScanDockScoringPlugin
+[0.122s] [ 82%] Built target SimpleHydrodynamics
+[0.138s] [ 86%] Built target Surface
+[0.141s] [ 90%] Built target WildlifeScoringPlugin
+[0.141s] [ 98%] Built target USVWind
+[0.141s] [ 98%] Built target WaveVisual
+[0.353s] running egg_info
+[0.353s] writing vrx_gz.egg-info/PKG-INFO
+[0.354s] writing dependency_links to vrx_gz.egg-info/dependency_links.txt
+[0.354s] writing top-level names to vrx_gz.egg-info/top_level.txt
+[0.356s] reading manifest file 'vrx_gz.egg-info/SOURCES.txt'
+[0.356s] writing manifest file 'vrx_gz.egg-info/SOURCES.txt'
+[0.383s] [ 98%] Built target ament_cmake_python_build_vrx_gz_egg
+[2.529s] [01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:[m[K In constructor ‘[01m[Kgz::gui::TargetPointPlugin::TargetPointPlugin()[m[K’:
+[2.529s] [01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:30:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gz::gui::TargetPointPlugin[m[K’ has no member named ‘[01m[KApp[m[K’
+[2.529s]    30 |       this->[01;31m[KApp[m[K()->findChild<MainWindow*>()->QuickWindow()->contentItem()->addItem(mainWidget);
+[2.529s]       |             [01;31m[K^~~[m[K
+[2.530s] [01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:30:40:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K*[m[K’ token
+[2.530s]    30 |       this->App()->findChild<MainWindow[01;31m[K*[m[K>()->QuickWindow()->contentItem()->addItem(mainWidget);
+[2.530s]       |                                        [01;31m[K^[m[K
+[2.530s] [01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:30:41:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[2.530s]    30 |       this->App()->findChild<MainWindow*[01;31m[K>[m[K()->QuickWindow()->contentItem()->addItem(mainWidget);
+[2.530s]       |                                         [01;31m[K^[m[K
+[2.530s] [01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:30:43:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K)[m[K’ token
+[2.530s]    30 |       this->App()->findChild<MainWindow*>([01;31m[K)[m[K->QuickWindow()->contentItem()->addItem(mainWidget);
+[2.530s]       |                                           [01;31m[K^[m[K
+[2.532s] [01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:[m[K In member function ‘[01m[Kvoid gz::gui::TargetPointPlugin::Update()[m[K’:
+[2.532s] [01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:50:37:[m[K [01;31m[Kerror: [m[K‘[01m[KsceneFromFirstRenderEngine[m[K’ is not a member of ‘[01m[Kgz::rendering[m[K’
+[2.532s]    50 |         auto scene = gz::rendering::[01;31m[KsceneFromFirstRenderEngine[m[K();
+[2.532s]       |                                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.535s] [01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:[m[K At global scope:
+[2.535s] [01m[K/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/src/target_point.cc:101:31:[m[K [01;31m[Kerror: [m[Kexpected constructor, destructor, or type conversion at end of input
+[2.535s]   101 |               gz::gui::Plugin)
+[2.535s]       |                               [01;31m[K^[m[K
+[2.856s] gmake[2]: *** [CMakeFiles/target_point_plugin.dir/build.make:76: CMakeFiles/target_point_plugin.dir/src/target_point.cc.o] Error 1
+[2.856s] gmake[1]: *** [CMakeFiles/Makefile2:794: CMakeFiles/target_point_plugin.dir/all] Error 2
+[2.857s] gmake: *** [Makefile:146: all] Error 2
+[2.859s] Invoked command in '/home/mrxiuer/project/毕设/demo/src/build/vrx_gz' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble LD_LIBRARY_PATH=/home/mrxiuer/project/毕设/demo/src/install/lib:/usr/local/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/mrxiuer/project/毕设/demo/src/build/vrx_gz -- -j16 -l16

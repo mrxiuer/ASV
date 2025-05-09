@@ -1,0 +1,10 @@
+/home/mrxiuer/project/毕设/demo/src/build/wamv_description/CMakeFiles/uninstall.dir
+/home/mrxiuer/project/毕设/demo/src/build/wamv_description/CMakeFiles/wamv_description_uninstall.dir
+/home/mrxiuer/project/毕设/demo/src/build/wamv_description/CMakeFiles/wamv_description__xacro_auto_generate.dir
+/home/mrxiuer/project/毕设/demo/src/build/wamv_description/CMakeFiles/test.dir
+/home/mrxiuer/project/毕设/demo/src/build/wamv_description/CMakeFiles/edit_cache.dir
+/home/mrxiuer/project/毕设/demo/src/build/wamv_description/CMakeFiles/rebuild_cache.dir
+/home/mrxiuer/project/毕设/demo/src/build/wamv_description/CMakeFiles/list_install_components.dir
+/home/mrxiuer/project/毕设/demo/src/build/wamv_description/CMakeFiles/install.dir
+/home/mrxiuer/project/毕设/demo/src/build/wamv_description/CMakeFiles/install/local.dir
+/home/mrxiuer/project/毕设/demo/src/build/wamv_description/CMakeFiles/install/strip.dir

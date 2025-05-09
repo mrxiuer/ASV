@@ -1,0 +1,68 @@
+[  2%] [32mBuilding CXX object CMakeFiles/target_point_plugin.dir/src/target_point.cc.o[0m
+[  6%] Built target ScoringPlugin
+[ 10%] Built target Waves
+[ 10%] Built target ament_cmake_python_copy_vrx_gz
+[35m[1mConsolidate compiler generated dependencies of target AcousticPingerPlugin[0m
+[35m[1mConsolidate compiler generated dependencies of target NavigationScoringPlugin[0m
+[35m[1mConsolidate compiler generated dependencies of target AcousticPerceptionScoringPlugin[0m
+[35m[1mConsolidate compiler generated dependencies of target GymkhanaScoringPlugin[0m
+[35m[1mConsolidate compiler generated dependencies of target AcousticTrackingScoringPlugin[0m
+[35m[1mConsolidate compiler generated dependencies of target PublisherPlugin[0m
+[35m[1mConsolidate compiler generated dependencies of target ScanDockScoringPlugin[0m
+[35m[1mConsolidate compiler generated dependencies of target WayfindingScoringPlugin[0m
+[35m[1mConsolidate compiler generated dependencies of target PerceptionScoringPlugin[0m
+[35m[1mConsolidate compiler generated dependencies of target PlacardPlugin[0m
+[35m[1mConsolidate compiler generated dependencies of target LightBuoyPlugin[0m
+[35m[1mConsolidate compiler generated dependencies of target BallShooterPlugin[0m
+[35m[1mConsolidate compiler generated dependencies of target StationkeepingScoringPlugin[0m
+[35m[1mConsolidate compiler generated dependencies of target PolyhedraBuoyancyDrag[0m
+[35m[1mConsolidate compiler generated dependencies of target SimpleHydrodynamics[0m
+[ 12%] [32m[1mLinking CXX shared library libGymkhanaScoringPlugin.so[0m
+[ 14%] [32m[1mLinking CXX shared library libLightBuoyPlugin.so[0m
+[ 16%] [32m[1mLinking CXX shared library libNavigationScoringPlugin.so[0m
+[ 18%] [32m[1mLinking CXX shared library libAcousticPingerPlugin.so[0m
+[ 22%] [32m[1mLinking CXX shared library libPublisherPlugin.so[0m
+[ 22%] [32m[1mLinking CXX shared library libPerceptionScoringPlugin.so[0m
+[ 24%] [32m[1mLinking CXX shared library libAcousticPerceptionScoringPlugin.so[0m
+[ 26%] [32m[1mLinking CXX shared library libAcousticTrackingScoringPlugin.so[0m
+[ 28%] [32m[1mLinking CXX shared library libBallShooterPlugin.so[0m
+[ 30%] [32m[1mLinking CXX shared library libPlacardPlugin.so[0m
+[ 32%] [32m[1mLinking CXX shared library libScanDockScoringPlugin.so[0m
+[ 34%] [32m[1mLinking CXX shared library libWayfindingScoringPlugin.so[0m
+[ 36%] [32m[1mLinking CXX shared library libSimpleHydrodynamics.so[0m
+[ 38%] [32m[1mLinking CXX shared library libStationkeepingScoringPlugin.so[0m
+[ 40%] [32m[1mLinking CXX shared library libPolyhedraBuoyancyDrag.so[0m
+[ 42%] Built target PublisherPlugin
+[35m[1mConsolidate compiler generated dependencies of target Surface[0m
+[ 44%] Built target PlacardPlugin
+[35m[1mConsolidate compiler generated dependencies of target USVWind[0m
+[ 46%] [32m[1mLinking CXX shared library libSurface.so[0m
+[ 48%] Built target NavigationScoringPlugin
+[ 50%] [32m[1mLinking CXX shared library libUSVWind.so[0m
+[ 52%] Built target GymkhanaScoringPlugin
+[ 54%] Built target SimpleHydrodynamics
+[35m[1mConsolidate compiler generated dependencies of target WaveVisual[0m
+[ 58%] Built target AcousticPerceptionScoringPlugin
+[35m[1mConsolidate compiler generated dependencies of target WildlifeScoringPlugin[0m
+[ 60%] Built target AcousticPingerPlugin
+[ 62%] [32m[1mLinking CXX shared library libWaveVisual.so[0m
+[ 64%] [32m[1mLinking CXX shared library libWildlifeScoringPlugin.so[0m
+[ 68%] Built target AcousticTrackingScoringPlugin
+[ 74%] Built target PolyhedraBuoyancyDrag
+[ 76%] Built target LightBuoyPlugin
+[ 78%] Built target PerceptionScoringPlugin
+[ 82%] Built target WayfindingScoringPlugin
+[ 84%] Built target BallShooterPlugin
+[ 88%] Built target StationkeepingScoringPlugin
+[ 90%] Built target ScanDockScoringPlugin
+running egg_info
+writing vrx_gz.egg-info/PKG-INFO
+writing dependency_links to vrx_gz.egg-info/dependency_links.txt
+writing top-level names to vrx_gz.egg-info/top_level.txt
+reading manifest file 'vrx_gz.egg-info/SOURCES.txt'
+writing manifest file 'vrx_gz.egg-info/SOURCES.txt'
+[ 90%] Built target ament_cmake_python_build_vrx_gz_egg
+[ 92%] Built target Surface
+[ 94%] Built target USVWind
+[ 96%] Built target WaveVisual
+[ 98%] Built target WildlifeScoringPlugin

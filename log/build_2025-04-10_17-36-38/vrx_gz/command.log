@@ -1,0 +1,6 @@
+Invoking command in '/home/mrxiuer/project/毕设/demo/src/build/vrx_gz': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz -DCMAKE_INSTALL_PREFIX=/home/mrxiuer/project/毕设/demo/src/install
+Invoked command in '/home/mrxiuer/project/毕设/demo/src/build/vrx_gz' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz -DCMAKE_INSTALL_PREFIX=/home/mrxiuer/project/毕设/demo/src/install
+Invoking command in '/home/mrxiuer/project/毕设/demo/src/build/vrx_gz': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/mrxiuer/project/毕设/demo/src/build/vrx_gz -- -j16 -l16
+Invoked command in '/home/mrxiuer/project/毕设/demo/src/build/vrx_gz' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/mrxiuer/project/毕设/demo/src/build/vrx_gz -- -j16 -l16
+Invoking command in '/home/mrxiuer/project/毕设/demo/src/build/vrx_gz': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/mrxiuer/project/毕设/demo/src/build/vrx_gz
+Invoked command in '/home/mrxiuer/project/毕设/demo/src/build/vrx_gz' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/mrxiuer/project/毕设/demo/src/build/vrx_gz

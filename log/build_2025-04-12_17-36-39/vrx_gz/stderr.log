@@ -1,0 +1,18 @@
+[31mCMake Error at CMakeLists.txt:199 (find_package):
+  By not providing "Findgz-transport7.cmake" in CMAKE_MODULE_PATH this
+  project has asked CMake to find a package configuration file provided by
+  "gz-transport7", but CMake did not find one.
+
+  Could not find a package configuration file provided by "gz-transport7"
+  with any of the following names:
+
+    gz-transport7Config.cmake
+    gz-transport7-config.cmake
+
+  Add the installation prefix of "gz-transport7" to CMAKE_PREFIX_PATH or set
+  "gz-transport7_DIR" to a directory containing one of the above files.  If
+  "gz-transport7" provides a separate development package or SDK, be sure it
+  has been installed.
+
+[0m
+gmake: *** [Makefile:1246: cmake_check_build_system] Error 1
