@@ -17,23 +17,26 @@ import os
 import signal
 import sys
 
-class RNN(nn.Module):
+class LSTM(nn.Module):
     def __init__(self):
-        super(RNN, self).__init__()
-        self.rnn = nn.RNN(input_size=2, hidden_size=20, num_layers=1, batch_first=True)
+        super(LSTM, self).__init__()
+        self.lstm = nn.LSTM(input_size=2, hidden_size=20, num_layers=2, batch_first=True)
         self.fc = nn.Linear(20, 1)
     
-    def forward(self, x, h_state=None):   #前向传播
+    def forward(self, x, h_state=None):  # 前向传播
         # 确保输入是3D张量 [batch_size, seq_len, input_size]
         if x.dim() == 2:
-            x = x.unsqueeze(0)  # 添加batch维度
+            x = x.unsqueeze(0)  # 添加 batch 维度
             
         # 如果没有提供隐藏状态或维度不匹配，初始化一个新的
-        if h_state is None or h_state.size(1) != x.size(0):
-            h_state = torch.zeros(1, x.size(0), 20, device=x.device)
+        if h_state is None or h_state[0].size(1) != x.size(0):
+            h_state = (
+                torch.zeros(2, x.size(0), 20, device=x.device),  # 隐藏状态 h
+                torch.zeros(2, x.size(0), 20, device=x.device)   # 细胞状态 c
+            )
             
-        r_out, h_state = self.rnn(x, h_state)
-        out = self.fc(r_out[:, -1, :])
+        r_out, h_state = self.lstm(x, h_state)
+        out = self.fc(r_out[:, -1, :])  # 取最后一个时间步的输出
         return out, h_state
 
 
@@ -51,9 +54,9 @@ class GetPosition(Node):
         self.thrust = 100.0  # 初始推力设置为100
         
         # 模型保存参数
-        self.model_save_dir = os.path.expanduser("../../rnn_model_save")
-        self.model_save_path = os.path.join(self.model_save_dir, "boat_rnn_model.pt")
-        self.optimizer_save_path = os.path.join(self.model_save_dir, "boat_rnn_optimizer.pt")
+        self.model_save_dir = os.path.expanduser("../../lstm_model_save")
+        self.model_save_path = os.path.join(self.model_save_dir, "boat_lstm_model.pt")
+        self.optimizer_save_path = os.path.join(self.model_save_dir, "boat_lstm_optimizer.pt")
         self.last_save_time = time.time()
         self.save_interval = 60.0  # 每60秒保存一次模型
         
@@ -63,9 +66,9 @@ class GetPosition(Node):
         # 创建保存目录
         os.makedirs(self.model_save_dir, exist_ok=True)
         
-        # 初始化RNN模型
-        self.rnn_model = RNN()
-        self.optimizer = optim.Adam(self.rnn_model.parameters(), lr=0.05)
+        # 初始化lstm模型
+        self.lstm_model = LSTM()
+        self.optimizer = optim.Adam(self.lstm_model.parameters(), lr=0.05)
         self.criterion = nn.MSELoss()
         self.hidden_state = None
         
@@ -100,7 +103,7 @@ class GetPosition(Node):
         try:
             if os.path.exists(self.model_save_path):
                 self.get_logger().info(f"加载模型: {self.model_save_path}")
-                self.rnn_model.load_state_dict(torch.load(self.model_save_path))
+                self.lstm_model.load_state_dict(torch.load(self.model_save_path))
                 
                 if os.path.exists(self.optimizer_save_path):
                     self.optimizer.load_state_dict(torch.load(self.optimizer_save_path))
@@ -114,7 +117,7 @@ class GetPosition(Node):
     def save_model(self):
         """保存模型到文件"""
         try:
-            torch.save(self.rnn_model.state_dict(), self.model_save_path)
+            torch.save(self.lstm_model.state_dict(), self.model_save_path)
             torch.save(self.optimizer.state_dict(), self.optimizer_save_path)
             self.get_logger().info(f"模型已保存到 {self.model_save_path}")
             self.last_save_time = time.time()
@@ -146,12 +149,12 @@ class GetPosition(Node):
         # 记录船前进方向与目标方向的角度差，用于日志记录
         self.get_logger().info(f"目标角度: {angle_to_target:.4f}, 当前偏航角: {self.cur_rot:.4f}, 角度差: {angle_diff:.4f}")
         
-        # 准备RNN输入：[偏航角, 夹角a]
+        # 准备lstm输入：[偏航角, 夹角a]
         # 修改为3D张量 [batch_size=1, seq_len=1, input_size=2]
         input_data = torch.tensor([[[self.cur_rot, angle_to_target]]], dtype=torch.float32)
         
         
-        self.train_rnn(input_data, angle_to_target)
+        self.train_lstm(input_data, angle_to_target)
         
         if self.train:
             # 检查是否需要保存模型
@@ -181,10 +184,10 @@ class GetPosition(Node):
         
         
         
-    def train_rnn(self, input_data, angle_to_target):
-        """训练RNN模型"""
+    def train_lstm(self, input_data, angle_to_target):
+        """训练lstm模型"""
         # 执行前向计算
-        propeller_angle, hidden_state = self.rnn_model(input_data, self.hidden_state)
+        propeller_angle, hidden_state = self.lstm_model(input_data, self.hidden_state)
         # 应用相同的限制
         propeller_angle_limited = torch.tanh(propeller_angle) * (math.pi)
         self.angle = propeller_angle_limited

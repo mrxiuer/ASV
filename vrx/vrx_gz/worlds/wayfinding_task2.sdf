@@ -511,7 +511,7 @@
 
     <include>
       <name>fangkuai</name>
-      <pose>-480 190 0 0 0 0</pose> <!-- 设置模型的位置和方向 -->
+      <pose>-480 200 0 0 0 0</pose> <!-- 设置模型的位置和方向 -->
       <uri>/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/models/fangkuai/model.sdf</uri> <!-- 模型的路径 -->
       <static>true</static> <!-- 是否静态 -->
     </include>
