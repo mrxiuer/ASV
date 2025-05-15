@@ -1,9 +1,0 @@
-[0.012s] Invoking command in '/home/mrxiuer/project/毕设/demo/src/build/vrx_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/mrxiuer/project/毕设/demo/src/build/vrx_gazebo -- -j16 -l16
-[0.069s] Built target ament_cmake_python_copy_vrx_gazebo
-[0.317s] running egg_info
-[0.317s] writing vrx_gazebo.egg-info/PKG-INFO
-[0.318s] writing dependency_links to vrx_gazebo.egg-info/dependency_links.txt
-[0.318s] writing top-level names to vrx_gazebo.egg-info/top_level.txt
-[0.319s] reading manifest file 'vrx_gazebo.egg-info/SOURCES.txt'
-[0.320s] writing manifest file 'vrx_gazebo.egg-info/SOURCES.txt'
-[0.353s] Built target ament_cmake_python_build_vrx_gazebo_egg

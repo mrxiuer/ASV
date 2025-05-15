@@ -59,15 +59,16 @@ class GetPosition(Node):
         self.path = []  # 存储路径点
         self.angle = 0.0
         self.thrust = 80.0  # 初始推力设置为100
+        self.index = 0
         
         # 模型保存参数
         self.model_save_dir = os.path.expanduser("../../lstm_model_save")
-        self.model_save_path = os.path.join(self.model_save_dir, "boat_lstm_model.pt")
-        self.optimizer_save_path = os.path.join(self.model_save_dir, "boat_lstm_optimizer.pt")
+        self.model_save_path = os.path.join(self.model_save_dir, "boat_lstm_model2.pt")
+        self.optimizer_save_path = os.path.join(self.model_save_dir, "boat_lstm_optimizer2.pt")
         self.last_save_time = time.time()
         self.save_interval = 60.0  # 每60秒保存一次模型
         
-        # self.train = True  # 是否训练模型
+        #self.train = True  # 是否训练模型
         self.train = False  # 是否训练模型
         
         # 创建保存目录
@@ -76,10 +77,9 @@ class GetPosition(Node):
         # 初始化日志文件路径
         self.log_file_path = os.path.join(self.model_save_dir, "CTL.txt")
         #如果文件为空，则写入表头
-        if not os.path.exists(self.log_file_path) or os.path.getsize(self.log_file_path) == 0:
-            # 如果文件不存在或为空，则写入表头
-            with open(self.log_file_path, "w") as f:
-                f.write("Time, Current Heading, Target Heading, Loss\n")  # 写入表头
+
+        with open(self.log_file_path, "w") as f:
+            f.write("Index, Current Heading, Target Heading\n")  # 写入表头
         
         # 初始化lstm模型
         self.lstm_model = LSTM()
@@ -170,10 +170,11 @@ class GetPosition(Node):
         
         # 记录船当前偏航角和目标偏航角到日志文件
         with open(self.log_file_path, "a") as f:
-            f.write(f"{time.time()}, {self.cur_rot:.4f}, {angle_to_target:.4f}, \n")
+            f.write(f"{self.index}, {self.cur_rot:.4f}, {angle_to_target:.4f}, \n")
         
         self.train_lstm(input_data, angle_to_target)
-        
+        self.index += 1
+                
         if self.train:
             # 检查是否需要保存模型
             current_time = time.time()
@@ -206,20 +207,23 @@ class GetPosition(Node):
         input_data = input_data.to(device)  # 将输入数据移动到 GPU 或 CPU
         angle_to_target = torch.tensor([[self.cur_rot - angle_to_target]], dtype=torch.float32, device=device, requires_grad=True)
 
+        # 前向传播
         propeller_angle, self.hidden_state = self.lstm_model(input_data, self.hidden_state)
         propeller_angle_limited = torch.tanh(propeller_angle) * (math.pi)
         self.angle = propeller_angle_limited
         loss = self.criterion(self.angle, angle_to_target)
 
+        # 反向传播和优化
         self.optimizer.zero_grad()
-        loss.backward()
+        loss.backward()  # 不需要 retain_graph=True，确保只调用一次
         self.optimizer.step()
 
+        # 重置隐藏状态（如果需要）
+        self.hidden_state = None
+
+        # 打印训练信息
         self.get_logger().info(f"训练损失: {loss.item():.4f}, 螺旋桨角度: {propeller_angle_limited.item():.4f}")
 
-        # 记录损失值到日志文件
-        with open(self.log_file_path, "a") as f:
-            f.write(f"{time.time()}, , , {loss.item():.4f}\n")  # 偏航角数据为空
 
     def gps_callback(self, msg):
         enu = gps_to_enu(msg.latitude, msg.longitude)
@@ -310,7 +314,7 @@ class GetPosition(Node):
         goal = tuple(map(int, goal))
         
         # 使用已计算的膨胀障碍物
-        inflated_obstacles = self.inflated_obstacles
+        inflated_obstacles = self.inflate_obstacles()
         
         if start in inflated_obstacles or goal in inflated_obstacles:
             start = self.find_nearest_safe_point(start, inflated_obstacles) # 如果起点或终点在障碍物中，寻找最近的安全点
@@ -466,7 +470,8 @@ if __name__ == '__main__':
         rclpy.spin(node)
     except KeyboardInterrupt:
         # 确保在程序退出前保存模型
-        node.save_model()
+        if node.train:
+            node.save_model()
     finally:
         node.destroy_node()
         rclpy.shutdown()

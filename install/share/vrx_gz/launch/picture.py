@@ -1,74 +1,77 @@
 import matplotlib.pyplot as plt
+import os
+import numpy as np
 
 def read_ctl_file(file_path):
     """读取CTL.txt文件并解析数据"""
-    time_stamps = []
+    indices = []
     current_headings = []
     target_headings = []
-    losses = []
 
     with open(file_path, "r") as f:
         lines = f.readlines()
         for line in lines[1:]:  # 跳过表头
             parts = line.strip().split(",")
-            if len(parts) == 4:
+            if len(parts) >= 3:  # 确保至少有3个部分
                 try:
-                    time_stamps.append(float(parts[0]) if parts[0].strip() else None)
-                    current_headings.append(float(parts[1]) if parts[1].strip() else None)
-                    target_headings.append(float(parts[2]) if parts[2].strip() else None)
-                    losses.append(float(parts[3]) if parts[3].strip() else None)
-                except ValueError:
-                    # 如果某一行数据格式不正确，跳过该行
-                    print(f"跳过无效行: {line.strip()}")
+                    idx = parts[0].strip()
+                    curr = parts[1].strip()
+                    targ = parts[2].strip()
+                    
+                    if idx and curr and targ:  # 确保所有值都不为空
+                        indices.append(float(idx))
+                        current_headings.append(float(curr))
+                        target_headings.append(float(targ))
+                except ValueError as e:
+                    print(f"跳过无效行: {line.strip()} - {e}")
                     continue
 
-    return time_stamps, current_headings, target_headings, losses
+    return indices, current_headings, target_headings
 
-def plot_loss(time_stamps, losses, output_path="loss_plot.png"):
-    """绘制损失函数变化图像"""
-    # 过滤掉 None 值
-    valid_indices = [i for i, loss in enumerate(losses) if loss is not None]
-    valid_losses = [losses[i] for i in valid_indices]
-
-    plt.figure()
-    plt.plot(valid_indices, valid_losses, label="Loss", color="blue")
-    plt.title("Loss Function Over Data Points")
-    plt.xlabel("Data Point Index")
-    plt.ylabel("Loss")
-    plt.legend()
-    plt.grid()
-    plt.savefig(output_path)
-    plt.close()
-    print(f"损失函数图像已保存到 {output_path}")
-    
-def plot_headings(time_stamps, current_headings, target_headings, output_path="headings_plot.png"):
+def plot_headings(indices, current_headings, target_headings, output_path="headings_plot.png"):
     """绘制当前偏航角和目标角度对比图"""
-    # 过滤掉 None 值
-    valid_indices = [i for i, (ch, th) in enumerate(zip(current_headings, target_headings)) if ch is not None and th is not None]
-    valid_current_headings = [current_headings[i] for i in valid_indices]
-    valid_target_headings = [target_headings[i] for i in valid_indices]
-
-    plt.figure()
-    plt.plot(valid_indices, valid_current_headings, label="Current Heading", color="blue")
-    plt.plot(valid_indices, valid_target_headings, label="Target Heading", linestyle="--", color="red")
-    plt.title("Current Heading vs Target Heading")
-    plt.xlabel("Data Point Index")
-    plt.ylabel("Heading (radians)")
-    plt.legend()
-    plt.grid()
-    plt.savefig(output_path)
-    plt.close()
-    print(f"偏航角对比图像已保存到 {output_path}")
+    plt.figure(figsize=(12, 6))
     
+    # 绘制当前偏航角（蓝色实线）
+    plt.plot(indices, current_headings, label="Current Angle", color="blue")
+    
+    # 绘制目标角度（红色虚线）
+    plt.plot(indices, target_headings, label="Target Angle", linestyle="--", color="red")
+    
+    # 设置图表标题和标签
+    plt.title("Current Angle VS Target Angle")
+    plt.xlabel("Index")
+    plt.ylabel("Angle (radians)")
+    plt.grid(True)
+    plt.legend()
+    
+    # 保存图像
+    plt.savefig(output_path, dpi=300)
+    print(f"图像已保存到: {output_path}")
+    
+    # 显示图像
+    plt.show()
+
 def main():
-    ctl_file_path = "../../lstm_model_save/CTL.txt"  # 替换为实际路径
-    time_stamps, current_headings, target_headings, losses = read_ctl_file(ctl_file_path)
-
-    # 绘制损失函数变化图像
-    plot_loss(time_stamps, losses, output_path="loss_plot.png")
-
+    ctl_file_path = "../../lstm_model_save/CTL.txt"
+    
+    # 检查文件是否存在
+    if not os.path.exists(ctl_file_path):
+        print(f"错误: 文件 {ctl_file_path} 不存在!")
+        return
+    
+    # 读取数据
+    indices, current_headings, target_headings = read_ctl_file(ctl_file_path)
+    
+    # 检查是否成功读取数据
+    if len(indices) == 0:
+        print("错误: 未能从文件中读取到有效数据!")
+        return
+    
+    print(f"成功读取 {len(indices)} 个数据点")
+    
     # 绘制当前偏航角和目标角度对比图
-    plot_headings(time_stamps, current_headings, target_headings, output_path="headings_plot.png")
+    plot_headings(indices, current_headings, target_headings, output_path="headings_plot.png")
 
 if __name__ == "__main__":
     main()

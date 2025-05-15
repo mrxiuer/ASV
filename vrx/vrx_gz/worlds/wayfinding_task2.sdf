@@ -484,7 +484,7 @@
           key: "gain"
           value {
             type: DOUBLE
-            <!-- double_value: 0.3 -->
+            <!-- double_value: 0.3-->
             double_value: 0.0
           }
         }
@@ -500,7 +500,7 @@
           key: "steepness"
           value {
             type: DOUBLE
-            double_value: 0
+            double_value: 0.0
           }
         }
       </message>
@@ -539,7 +539,7 @@
 
     <include>
       <name>fangkuai_4</name>
-      <pose>-400 190 0 0 0 0</pose> <!-- 设置模型的位置和方向 -->
+      <pose>-430 190 0 0 0 0</pose> <!-- 设置模型的位置和方向 -->
       <uri>/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/models/fangkuai/model.sdf</uri> <!-- 模型的路径 -->
       <static>true</static> <!-- 是否静态 -->
     </include>
@@ -560,7 +560,7 @@
 
     <include>
       <name>zhuzi</name>
-      <pose>-430 200 0 0 0 0</pose> <!-- 设置模型的位置和方向 -->
+      <pose>-430 195 0 0 0 0</pose> <!-- 设置模型的位置和方向 -->
       <uri>/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/models/zhuzi/model.sdf</uri> <!-- 模型的路径 -->
       <static>true</static> <!-- 是否静态 -->
     </include>
@@ -574,7 +574,7 @@
 
     <include>
       <name>zhuzi_2</name>
-      <pose>-440 170 0 0 0 1</pose> <!-- 设置模型的位置和方向 -->
+      <pose>-400 180 0 0 0 1</pose> <!-- 设置模型的位置和方向 -->
       <uri>/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/models/zhuzi/model.sdf</uri> <!-- 模型的路径 -->
       <static>true</static> <!-- 是否静态 -->
     </include>
@@ -588,7 +588,7 @@
 
     <include>
       <name>zhuzi_4</name>
-      <pose>-440 160 0 0 0 2</pose> <!-- 设置模型的位置和方向 -->
+      <pose>-440 170 0 0 0 2</pose> <!-- 设置模型的位置和方向 -->
       <uri>/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/models/zhuzi/model.sdf</uri> <!-- 模型的路径 -->
       <static>true</static> <!-- 是否静态 -->
     </include>
@@ -602,7 +602,7 @@
 
     <include>
       <name>zhuzi_6</name>
-      <pose>-330 240 0 0 0 1.57</pose> <!-- 设置模型的位置和方向 -->
+      <pose>-450 180 0 0 0 1.57</pose> <!-- 设置模型的位置和方向 -->
       <uri>/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/models/zhuzi/model.sdf</uri> <!-- 模型的路径 -->
       <static>true</static> <!-- 是否静态 -->
     </include>
@@ -672,14 +672,14 @@
 
     <include>
       <name>fangkuai_8</name>
-      <pose>-440 220 0 0 0 -1.42</pose> <!-- 设置模型的位置和方向 -->
+      <pose>-460 180 0 0 0 -1.42</pose> <!-- 设置模型的位置和方向 -->
       <uri>/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/models/fangkuai/model.sdf</uri> <!-- 模型的路径 -->
       <static>true</static> <!-- 是否静态 -->
     </include>
 
     <include>
       <name>fangkuai_9</name>
-      <pose>-400 210 0 0 0 1.57</pose> <!-- 设置模型的位置和方向 -->
+      <pose>-430 210 0 0 0 1.57</pose> <!-- 设置模型的位置和方向 -->
       <uri>/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/models/fangkuai/model.sdf</uri> <!-- 模型的路径 -->
       <static>true</static> <!-- 是否静态 -->
     </include>
@@ -715,14 +715,14 @@
 
     <include>
       <name>fangkuai_14</name>
-      <pose>-450 200 0 0 0 -1.42</pose> <!-- 设置模型的位置和方向 -->
+      <pose>-450 178 0 0 0 -1.42</pose> <!-- 设置模型的位置和方向 -->
       <uri>/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/models/fangkuai/model.sdf</uri> <!-- 模型的路径 -->
       <static>true</static> <!-- 是否静态 -->
     </include>
 
     <include>
       <name>fangkuai_15</name>
-      <pose>-470 180 0 0 0 -1.42</pose> <!-- 设置模型的位置和方向 -->
+      <pose>-470 173 0 0 0 -1.42</pose> <!-- 设置模型的位置和方向 -->
       <uri>/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/models/fangkuai/model.sdf</uri> <!-- 模型的路径 -->
       <static>true</static> <!-- 是否静态 -->
     </include>
@@ -736,7 +736,7 @@
 
     <include>
       <name>fangkuai_17</name>
-      <pose>-460 240 0 0 0 -1.42</pose> <!-- 设置模型的位置和方向 -->
+      <pose>-460 225 0 0 0 -1.42</pose> <!-- 设置模型的位置和方向 -->
       <uri>/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz/models/fangkuai/model.sdf</uri> <!-- 模型的路径 -->
       <static>true</static> <!-- 是否静态 -->
     </include>

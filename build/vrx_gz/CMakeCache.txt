@@ -520,9 +520,6 @@ fastrtps_cmake_module_DIR:PATH=/opt/ros/humble/share/fastrtps_cmake_module/cmake
 //The directory containing a CMake configuration file for gz-cmake3.
 gz-cmake3_DIR:PATH=/usr/share/cmake/gz-cmake3
 
-//The directory containing a CMake configuration file for gz-cmake4.
-gz-cmake4_DIR:PATH=/usr/share/cmake/gz-cmake4
-
 //The directory containing a CMake configuration file for gz-common5-av.
 gz-common5-av_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/gz-common5-av
 
@@ -547,9 +544,6 @@ gz-common5-testing_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/gz-common5-testing
 //The directory containing a CMake configuration file for gz-common5.
 gz-common5_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/gz-common5
 
-//The directory containing a CMake configuration file for gz-common7.
-gz-common7_DIR:PATH=gz-common7_DIR-NOTFOUND
-
 //The directory containing a CMake configuration file for gz-fuel_tools8.
 gz-fuel_tools8_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/gz-fuel_tools8
 
@@ -561,12 +555,6 @@ gz-math7-eigen3_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/gz-math7-eigen3
 
 //The directory containing a CMake configuration file for gz-math7.
 gz-math7_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/gz-math7
-
-//The directory containing a CMake configuration file for gz-math8.
-gz-math8_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/gz-math8
-
-//The directory containing a CMake configuration file for gz-msgs11.
-gz-msgs11_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/gz-msgs11
 
 //The directory containing a CMake configuration file for gz-msgs9.
 gz-msgs9_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/gz-msgs9
@@ -667,23 +655,11 @@ gz-transport12-parameters_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/gz-transport1
 //The directory containing a CMake configuration file for gz-transport12.
 gz-transport12_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/gz-transport12
 
-//The directory containing a CMake configuration file for gz-transport14.
-gz-transport14_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/gz-transport14
-
-//The directory containing a CMake configuration file for gz-transport7.
-gz-transport7_DIR:PATH=gz-transport7_DIR-NOTFOUND
-
 //The directory containing a CMake configuration file for gz-utils2-cli.
 gz-utils2-cli_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/gz-utils2-cli
 
 //The directory containing a CMake configuration file for gz-utils2.
 gz-utils2_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/gz-utils2
-
-//The directory containing a CMake configuration file for gz-utils3-cli.
-gz-utils3-cli_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/gz-utils3-cli
-
-//The directory containing a CMake configuration file for gz-utils3.
-gz-utils3_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/gz-utils3
 
 //The directory containing a CMake configuration file for jsoncpp.
 jsoncpp_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/jsoncpp
@@ -777,18 +753,6 @@ sdformat13_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/sdformat13
 
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/humble/share/std_msgs/cmake
-
-//Value Computed by CMake
-target_point_plugin_BINARY_DIR:STATIC=/home/mrxiuer/project/毕设/demo/src/build/vrx_gz
-
-//Value Computed by CMake
-target_point_plugin_IS_TOP_LEVEL:STATIC=ON
-
-//Dependencies for the target
-target_point_plugin_LIB_DEPENDS:STATIC=general;gz-gui7::gz-gui7;general;gz-rendering7::gz-rendering7;general;gz-transport12::gz-transport12;general;gz-msgs9::gz-msgs9;general;Qt5::Widgets;general;Qt5::Core;general;Qt5::Qml;general;Qt5::Quick;
-
-//Value Computed by CMake
-target_point_plugin_SOURCE_DIR:STATIC=/home/mrxiuer/project/毕设/demo/src/vrx/vrx_gz
 
 //Value Computed by CMake
 vrx_gz_BINARY_DIR:STATIC=/home/mrxiuer/project/毕设/demo/src/build/vrx_gz

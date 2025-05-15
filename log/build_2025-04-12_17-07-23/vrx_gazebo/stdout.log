@@ -1,8 +1,0 @@
-Built target ament_cmake_python_copy_vrx_gazebo
-running egg_info
-writing vrx_gazebo.egg-info/PKG-INFO
-writing dependency_links to vrx_gazebo.egg-info/dependency_links.txt
-writing top-level names to vrx_gazebo.egg-info/top_level.txt
-reading manifest file 'vrx_gazebo.egg-info/SOURCES.txt'
-writing manifest file 'vrx_gazebo.egg-info/SOURCES.txt'
-Built target ament_cmake_python_build_vrx_gazebo_egg

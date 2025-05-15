@@ -38,7 +38,6 @@
 /home/mrxiuer/project/毕设/demo/src/install/share/vrx_gz/config/roboboat.yaml
 /home/mrxiuer/project/毕设/demo/src/install/share/vrx_gz/launch/picture.py
 /home/mrxiuer/project/毕设/demo/src/install/share/vrx_gz/launch/improved_A_star.py
-/home/mrxiuer/project/毕设/demo/src/install/share/vrx_gz/launch/loss_plot.png
 /home/mrxiuer/project/毕设/demo/src/install/share/vrx_gz/launch/A_star.py
 /home/mrxiuer/project/毕设/demo/src/install/share/vrx_gz/launch/__pycache__/common_utilities.cpython-310.pyc
 /home/mrxiuer/project/毕设/demo/src/install/share/vrx_gz/launch/spawn_config.launch.py

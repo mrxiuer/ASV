@@ -16,14 +16,21 @@ import time
 import os
 import signal
 import sys
+from torch.utils.tensorboard import SummaryWriter
+
+# 检查是否有可用的 GPU
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 class LSTM(nn.Module):
     def __init__(self):
         super(LSTM, self).__init__()
         self.lstm = nn.LSTM(input_size=2, hidden_size=20, num_layers=2, batch_first=True)
         self.fc = nn.Linear(20, 1)
+        self.to(device)  # 将模型移动到 GPU 或 CPU
     
     def forward(self, x, h_state=None):  # 前向传播
+        x = x.to(device)  # 将输入数据移动到 GPU 或 CPU
+
         # 确保输入是3D张量 [batch_size, seq_len, input_size]
         if x.dim() == 2:
             x = x.unsqueeze(0)  # 添加 batch 维度
@@ -31,8 +38,8 @@ class LSTM(nn.Module):
         # 如果没有提供隐藏状态或维度不匹配，初始化一个新的
         if h_state is None or h_state[0].size(1) != x.size(0):
             h_state = (
-                torch.zeros(2, x.size(0), 20, device=x.device),  # 隐藏状态 h
-                torch.zeros(2, x.size(0), 20, device=x.device)   # 细胞状态 c
+                torch.zeros(2, x.size(0), 20, device=device),  # 隐藏状态 h
+                torch.zeros(2, x.size(0), 20, device=device)   # 细胞状态 c
             )
             
         r_out, h_state = self.lstm(x, h_state)
@@ -51,20 +58,28 @@ class GetPosition(Node):
         self.global_map = set()  # 全局地图，使用集合存储障碍物以避免重复
         self.path = []  # 存储路径点
         self.angle = 0.0
-        self.thrust = 100.0  # 初始推力设置为100
+        self.thrust = 80.0  # 初始推力设置为100
+        self.index = 0
         
         # 模型保存参数
         self.model_save_dir = os.path.expanduser("../../lstm_model_save")
-        self.model_save_path = os.path.join(self.model_save_dir, "boat_lstm_model.pt")
-        self.optimizer_save_path = os.path.join(self.model_save_dir, "boat_lstm_optimizer.pt")
+        self.model_save_path = os.path.join(self.model_save_dir, "boat_lstm_model1.pt")
+        self.optimizer_save_path = os.path.join(self.model_save_dir, "boat_lstm_optimizer1.pt")
         self.last_save_time = time.time()
         self.save_interval = 60.0  # 每60秒保存一次模型
         
-        # self.train = True  # 是否训练模型
+        #self.train = True  # 是否训练模型
         self.train = False  # 是否训练模型
         
         # 创建保存目录
         os.makedirs(self.model_save_dir, exist_ok=True)
+        
+        # 初始化日志文件路径
+        self.log_file_path = os.path.join(self.model_save_dir, "CTL.txt")
+        #如果文件为空，则写入表头
+
+        with open(self.log_file_path, "w") as f:
+            f.write("Index, Current Heading, Target Heading\n")  # 写入表头
         
         # 初始化lstm模型
         self.lstm_model = LSTM()
@@ -153,9 +168,13 @@ class GetPosition(Node):
         # 修改为3D张量 [batch_size=1, seq_len=1, input_size=2]
         input_data = torch.tensor([[[self.cur_rot, angle_to_target]]], dtype=torch.float32)
         
+        # 记录船当前偏航角和目标偏航角到日志文件
+        with open(self.log_file_path, "a") as f:
+            f.write(f"{self.index}, {self.cur_rot:.4f}, {angle_to_target:.4f}, \n")
         
         self.train_lstm(input_data, angle_to_target)
-        
+        self.index += 1
+                
         if self.train:
             # 检查是否需要保存模型
             current_time = time.time()
@@ -183,22 +202,25 @@ class GetPosition(Node):
         self.angle_pub_r.publish(angle_msg_r)
         
         
-        
     def train_lstm(self, input_data, angle_to_target):
-        """训练lstm模型"""
-        # 执行前向计算
-        propeller_angle, hidden_state = self.lstm_model(input_data, self.hidden_state)
-        # 应用相同的限制
+        """训练 LSTM 模型"""
+        input_data = input_data.to(device)  # 将输入数据移动到 GPU 或 CPU
+        angle_to_target = torch.tensor([[self.cur_rot - angle_to_target]], dtype=torch.float32, device=device, requires_grad=True)
+
+        # 前向传播
+        propeller_angle, self.hidden_state = self.lstm_model(input_data, self.hidden_state)
         propeller_angle_limited = torch.tanh(propeller_angle) * (math.pi)
         self.angle = propeller_angle_limited
-        target = torch.tensor([[self.cur_rot - angle_to_target]], dtype=torch.float32,requires_grad=True)
-        loss = self.criterion(self.angle, target)
-        
+        loss = self.criterion(self.angle, angle_to_target)
+
         # 反向传播和优化
         self.optimizer.zero_grad()
-        loss.backward()
+        loss.backward()  # 不需要 retain_graph=True，确保只调用一次
         self.optimizer.step()
-        
+
+        # 重置隐藏状态（如果需要）
+        self.hidden_state = None
+
         # 打印训练信息
         self.get_logger().info(f"训练损失: {loss.item():.4f}, 螺旋桨角度: {propeller_angle_limited.item():.4f}")
 
@@ -253,6 +275,9 @@ class GetPosition(Node):
         # 膨胀障碍物
         self.global_map = self.inflate_obstacles()
 
+        # 计算膨胀障碍物（只计算一次）
+        self.inflated_obstacles = self.inflate_obstacles()
+
         # 计算路径
         self.path = self.a_star(self.cur_pos, self.goal_pos)
 
@@ -283,11 +308,11 @@ class GetPosition(Node):
         return False
 
     def a_star(self, start, goal):
-        """A* 算法"""
+        """改进A* 算法"""
         start = tuple(map(int, start))
         goal = tuple(map(int, goal))
         
-        # 获取膨胀后的障碍物地图
+        # 使用已计算的膨胀障碍物
         inflated_obstacles = self.inflate_obstacles()
         
         if start in inflated_obstacles or goal in inflated_obstacles:
@@ -328,18 +353,16 @@ class GetPosition(Node):
         return math.sqrt((a[0] - b[0])**2 + (a[1] - b[1])**2)
 
     def get_neighbors(self, node):
-        """获取当前节点的邻居节点，8个节点"""
+        """获取当前节点的邻居节点，8个方向"""
         x, y = node
-        return [
-            (x + 1, y),
-            (x - 1, y),
-            (x, y + 1),
-            (x, y - 1),
-            (x + 1, y + 1),
-            (x + 1, y - 1),
-            (x - 1, y + 1),
-            (x - 1, y - 1)
+        
+        # 基本的8个方向（上下左右和对角线）
+        neighbors = [
+            (x+1, y), (x-1, y), (x, y+1), (x, y-1),  # 上下左右
+            (x+1, y+1), (x+1, y-1), (x-1, y+1), (x-1, y-1),  # 对角线
         ]
+
+        return neighbors
 
     def reconstruct_path(self, came_from, current):
         """重建路径"""
@@ -433,7 +456,8 @@ if __name__ == '__main__':
         rclpy.spin(node)
     except KeyboardInterrupt:
         # 确保在程序退出前保存模型
-        node.save_model()
+        if node.train:
+            node.save_model()
     finally:
         node.destroy_node()
         rclpy.shutdown()

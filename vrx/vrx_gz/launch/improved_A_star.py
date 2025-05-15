@@ -63,12 +63,12 @@ class GetPosition(Node):
         
         # 模型保存参数
         self.model_save_dir = os.path.expanduser("../../lstm_model_save")
-        self.model_save_path = os.path.join(self.model_save_dir, "boat_lstm_model.pt")
-        self.optimizer_save_path = os.path.join(self.model_save_dir, "boat_lstm_optimizer.pt")
+        self.model_save_path = os.path.join(self.model_save_dir, "boat_lstm_model2.pt")
+        self.optimizer_save_path = os.path.join(self.model_save_dir, "boat_lstm_optimizer2.pt")
         self.last_save_time = time.time()
         self.save_interval = 60.0  # 每60秒保存一次模型
         
-        # self.train = True  # 是否训练模型
+        #self.train = True  # 是否训练模型
         self.train = False  # 是否训练模型
         
         # 创建保存目录
@@ -79,7 +79,7 @@ class GetPosition(Node):
         #如果文件为空，则写入表头
 
         with open(self.log_file_path, "w") as f:
-            f.write("Index, Current Heading, Target Heading, Loss\n")  # 写入表头
+            f.write("Index, Current Heading, Target Heading\n")  # 写入表头
         
         # 初始化lstm模型
         self.lstm_model = LSTM()
@@ -224,9 +224,6 @@ class GetPosition(Node):
         # 打印训练信息
         self.get_logger().info(f"训练损失: {loss.item():.4f}, 螺旋桨角度: {propeller_angle_limited.item():.4f}")
 
-        # 记录损失值到日志文件
-        with open(self.log_file_path, "a") as f:
-            f.write(f"{self.index}, , , {loss.item():.4f}\n")  # 偏航角数据为空
 
     def gps_callback(self, msg):
         enu = gps_to_enu(msg.latitude, msg.longitude)
@@ -473,7 +470,8 @@ if __name__ == '__main__':
         rclpy.spin(node)
     except KeyboardInterrupt:
         # 确保在程序退出前保存模型
-        node.save_model()
+        if node.train:
+            node.save_model()
     finally:
         node.destroy_node()
         rclpy.shutdown()

@@ -70,7 +70,7 @@ CMakeFiles/wamv_description__xacro_auto_generate: urdf/wamv_base.urdf
 
 urdf/wamv_base.urdf: /home/mrxiuer/project/毕设/demo/src/vrx/vrx_urdf/wamv_description/urdf/wamv_base.urdf.xacro
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mrxiuer/project/毕设/demo/src/build/wamv_description/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "xacro: generating urdf/wamv_base.urdf from urdf/wamv_base.urdf.xacro"
-	cd /home/mrxiuer/project/毕设/demo/src/vrx/vrx_urdf/wamv_description && xacro -o /home/mrxiuer/project/毕设/demo/src/build/wamv_description/urdf/wamv_base.urdf urdf/wamv_base.urdf.xacro
+	cd /home/mrxiuer/project/毕设/demo/src/vrx/vrx_urdf/wamv_description && /usr/bin/cmake -E env AMENT_PREFIX_PATH="/home/mrxiuer/project/毕设/demo/src/build/wamv_description/ament_cmake_index:/home/mrxiuer/project/毕设/demo/src/install:/opt/ros/humble" xacro -o /home/mrxiuer/project/毕设/demo/src/build/wamv_description/urdf/wamv_base.urdf urdf/wamv_base.urdf.xacro
 
 wamv_description__xacro_auto_generate: CMakeFiles/wamv_description__xacro_auto_generate
 wamv_description__xacro_auto_generate: urdf/wamv_base.urdf
