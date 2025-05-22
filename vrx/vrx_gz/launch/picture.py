@@ -1,6 +1,8 @@
 import matplotlib.pyplot as plt
 import os
 import numpy as np
+plt.rcParams['font.sans-serif'] = ['WenQuanYi Zen Hei']
+plt.rcParams['axes.unicode_minus'] = False    # 正常显示负号
 
 def read_ctl_file(file_path):
     """读取CTL.txt文件并解析数据"""
@@ -33,15 +35,15 @@ def plot_headings(indices, current_headings, target_headings, output_path="headi
     plt.figure(figsize=(12, 6))
     
     # 绘制当前偏航角（蓝色实线）
-    plt.plot(indices, current_headings, label="Current Angle", color="blue")
+    plt.plot(indices, current_headings, label="当前方向", color="blue")
     
     # 绘制目标角度（红色虚线）
-    plt.plot(indices, target_headings, label="Target Angle", linestyle="--", color="red")
+    plt.plot(indices, target_headings, label="目标方向", linestyle="--", color="red")
     
     # 设置图表标题和标签
-    plt.title("Current Angle VS Target Angle")
-    plt.xlabel("Index")
-    plt.ylabel("Angle (radians)")
+    plt.title("当前方向 VS 目标方向")
+    plt.xlabel("节点索引")
+    plt.ylabel("角度 (弧度)")
     plt.grid(True)
     plt.legend()
     
