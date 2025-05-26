@@ -6,9 +6,9 @@ from std_msgs.msg import Float64
 from geographic_msgs.msg import GeoPath
 import math
 import numpy as np
-from common_utilities import gps_to_enu, quaternion_to_euler, euler_to_quaternion
+from common_utilities import gps_to_enu, quaternion_to_euler
 import cv2
-import heapq  # 用于优先队列实现 A* 算法
+import heapq
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -18,7 +18,6 @@ import signal
 import sys
 from torch.utils.tensorboard import SummaryWriter
 
-# 检查是否有可用的 GPU
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 class LSTM(nn.Module):
@@ -26,10 +25,10 @@ class LSTM(nn.Module):
         super(LSTM, self).__init__()
         self.lstm = nn.LSTM(input_size=2, hidden_size=20, num_layers=2, batch_first=True)
         self.fc = nn.Linear(20, 1)
-        self.to(device)  # 将模型移动到 GPU 或 CPU
+        self.to(device)
     
     def forward(self, x, h_state=None):  # 前向传播
-        x = x.to(device)  # 将输入数据移动到 GPU 或 CPU
+        x = x.to(device)
 
         # 确保输入是3D张量 [batch_size, seq_len, input_size]
         if x.dim() == 2:
@@ -38,8 +37,8 @@ class LSTM(nn.Module):
         # 如果没有提供隐藏状态或维度不匹配，初始化一个新的
         if h_state is None or h_state[0].size(1) != x.size(0):
             h_state = (
-                torch.zeros(2, x.size(0), 20, device=device),  # 隐藏状态 h
-                torch.zeros(2, x.size(0), 20, device=device)   # 细胞状态 c
+                torch.zeros(2, x.size(0), 20, device=device),
+                torch.zeros(2, x.size(0), 20, device=device)
             )
             
         r_out, h_state = self.lstm(x, h_state)
@@ -63,8 +62,8 @@ class GetPosition(Node):
         
         # 模型保存参数
         self.model_save_dir = os.path.expanduser("../../lstm_model_save")
-        self.model_save_path = os.path.join(self.model_save_dir, "boat_lstm_model1.pt")
-        self.optimizer_save_path = os.path.join(self.model_save_dir, "boat_lstm_optimizer1.pt")
+        self.model_save_path = os.path.join(self.model_save_dir, "boat_lstm_model2.pt")
+        self.optimizer_save_path = os.path.join(self.model_save_dir, "boat_lstm_optimizer2.pt")
         self.last_save_time = time.time()
         self.save_interval = 60.0  # 每60秒保存一次模型
         
@@ -161,14 +160,14 @@ class GetPosition(Node):
         # 计算夹角a：当前位置与路径点所成的夹角
         angle_diff = self.cur_rot - angle_to_target
         
-        # 记录船前进方向与目标方向的角度差，用于日志记录
+        # 记录船前进方向与目标方向的角度差
         self.get_logger().info(f"目标角度: {angle_to_target:.4f}, 当前偏航角: {self.cur_rot:.4f}, 角度差: {angle_diff:.4f}")
         
         # 准备lstm输入：[偏航角, 夹角a]
         # 修改为3D张量 [batch_size=1, seq_len=1, input_size=2]
         input_data = torch.tensor([[[self.cur_rot, angle_to_target]]], dtype=torch.float32)
         
-        # 记录船当前偏航角和目标偏航角到日志文件
+        # 记录船当前偏航角和目标偏航角，方便画图
         with open(self.log_file_path, "a") as f:
             f.write(f"{self.index}, {self.cur_rot:.4f}, {angle_to_target:.4f}, \n")
         
@@ -187,7 +186,7 @@ class GetPosition(Node):
         angle_msg_l = Float64()
         angle_msg_r = Float64()
         
-        # 确保推力为正，船才会前进
+        # 取绝对值
         thrust_value = abs(self.thrust)
         thrust_msg_l.data = float(thrust_value)
         thrust_msg_r.data = float(thrust_value)
@@ -215,14 +214,14 @@ class GetPosition(Node):
 
         # 反向传播和优化
         self.optimizer.zero_grad()
-        loss.backward()  # 不需要 retain_graph=True，确保只调用一次
+        loss.backward()
         self.optimizer.step()
 
-        # 重置隐藏状态（如果需要）
         self.hidden_state = None
 
         # 打印训练信息
         self.get_logger().info(f"训练损失: {loss.item():.4f}, 螺旋桨角度: {propeller_angle_limited.item():.4f}")
+
 
     def gps_callback(self, msg):
         enu = gps_to_enu(msg.latitude, msg.longitude)
@@ -251,7 +250,7 @@ class GetPosition(Node):
         current_scan = set()
 
         for i, r in enumerate(ranges):
-            if 1 < r < msg.range_max:  # 过滤掉无效的距离值
+            if 1 < r < msg.range_max:  # 过滤
                 angle = angle_min + i * angle_increment
                 # 将激光雷达的局部坐标转换为全局坐标
                 x_local = r * math.cos(angle)
@@ -265,7 +264,7 @@ class GetPosition(Node):
         new_points = current_scan - self.global_map
         self.global_map.update(new_points)
 
-        # 移除当前扫描中没有的点（但保留被遮挡的点）
+        # 移除当前扫描中没有的点（但保留可能被遮挡的点）
         points_to_remove = self.global_map - current_scan
         for point in points_to_remove:
             # 检查是否可能是被遮挡的点
@@ -285,7 +284,7 @@ class GetPosition(Node):
         self.draw_map()
 
     def inflate_obstacles(self):
-        """膨胀障碍物，将每个点扩展为半径米的圆"""
+        """膨胀障碍物，预留安全空间"""
         inflated_map = set()
         inflation_radius = 2  # 膨胀半径（米）
         
@@ -353,7 +352,7 @@ class GetPosition(Node):
         return math.sqrt((a[0] - b[0])**2 + (a[1] - b[1])**2)
 
     def get_neighbors(self, node):
-        """获取当前节点的邻居节点，8个方向"""
+        """获取当前节点的邻居节点，24个方向"""
         x, y = node
         
         # 基本的8个方向（上下左右和对角线）
